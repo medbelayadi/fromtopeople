@@ -81,7 +81,7 @@ export function Hero({ language }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative overflow-hidden py-16 md:py-32"
+      className="relative overflow-hidden py-24 md:py-32"
       style={{
         backgroundImage: "url('/background-pattern.jpeg')",
         backgroundSize: 'cover',
@@ -89,11 +89,11 @@ export function Hero({ language }: HeroProps) {
         backgroundAttachment: 'fixed',
       }}
     >
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-blue-900/30 md:bg-blue-900/40" />
+{/* Overlay for better text readability */}
+<div className="absolute inset-0 bg-blue-900/30 md:bg-blue-900/40" />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+<div className="container mx-auto px-4 relative z-10 pt-12 md:pt-16">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div className={`space-y-6 ${language === 'ar' ? 'font-arabic lg:order-2' : 'lg:order-1'}`}>
             <div className="space-y-4">
@@ -157,7 +157,7 @@ export function Hero({ language }: HeroProps) {
           {/* Right - Logo & Name */}
           <div className="relative flex items-center justify-center lg:order-2">
             {/* Bigger Logo */}
-            <div className="w-72 h-72 md:w-96 md:h-96 relative">
+            <div className="w-80 h-80 md:w-96 md:h-96 relative">
               <Image
                 src="/LOGOpng.png"
                 alt="Logo"
@@ -165,9 +165,9 @@ export function Hero({ language }: HeroProps) {
                 className="object-contain"
               />
             </div>
-          </div>
         </div>
       </div>
+    </div>
     </section>
   )
 }

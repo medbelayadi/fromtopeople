@@ -95,9 +95,9 @@ content: 'We held an Open Call for emerging artists, designers, and artisans fro
         '/images/news/vist001.png',
         '/images/news/vist002.png',
         '/images/news/visits.jpg',
-        '/images/news/visit003.png',
-         '/images/news/visit004.png',
-         '/images/news/vist007.png',
+        '/images/news/vist003.png',
+         '/images/news/vist004.png',
+         '/images/news/visit007.jpeg',
           '/images/news/visit008.jpeg',
             '/images/news/visit009.jpeg',
 

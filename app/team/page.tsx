@@ -9,7 +9,7 @@ export default function TeamPageComponent() {
   const { language } = useLanguage()
 
   return (
-    <main dir={language === 'ar' ? 'rtl' : 'ltr'}>
+    <main dir={language === 'ar' ? 'rtl' : 'ltr'} className="-mt-16 md:-mt-20">
       <Header />
       <TeamPage />
       <Footer language={language} />

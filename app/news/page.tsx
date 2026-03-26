@@ -9,7 +9,7 @@ export default function NewsPageComponent() {
   const { language, setLanguage } = useLanguage()
 
   return (
-    <main dir={language === 'ar' ? 'rtl' : 'ltr'}>
+    <main dir={language === 'ar' ? 'rtl' : 'ltr'} className="pt-24 sm:pt-28 lg:pt-32">
       <Header />
       <NewsPage language={language} />
       <Footer language={language} />

@@ -32,77 +32,122 @@ interface TeamPageProps {
 }
 
 export function TeamPage({}: TeamPageProps) {
-  const [selectedMember, setSelectedMember] = React.useState<TeamMember | null>(null)
+
   const [organigramOpen, setOrganigramOpen] = React.useState(false)
   const { language } = useLanguage()
   const isArabic = language === 'ar'
 
   const teamDataEn: TeamMember[] = [
-    {
-      nameEn: 'Sara Ben Ali',
-      nameAr: 'سارة بن علي',
-      roleEn: 'Program Manager',
-      roleAr: 'مديرة البرنامج',
-      bioShortEn: 'Leads the overall vision, coordination, and implementation of the From & To People program. With 12+ years in cultural and artistic projects, she ensures seamless execution across all modules.',
-      bioShortAr: 'تقود الرؤية العامة والتنسيق والتنفيذ لبرنامج من وإلى الناس. مع أكثر من 12 عاماً في المشاريع الثقافية والفنية، تضمن تنفيذاً سلساً لجميع الوحدات.',
-      bioFullEn: 'Sara has extensive experience managing large-scale artistic training programs in Tunisia. She specializes in bridging traditional crafts with contemporary ecological practices, having previously coordinated similar initiatives in South Tunisia. Her leadership style emphasizes collaboration and knowledge sharing.',
-      bioFullAr: 'لسارة خبرة واسعة في إدارة برامج تكوين فني كبيرة في تونس. تتخصص في ربط الحرف التقليدية بالممارسات الإيكولوجية المعاصرة، وقد نسقت سابقاً مبادرات مشابهة في جنوب تونس. أسلوب قيادتها يركز على التعاون ومشاركة المعرفة.',
-      image: '/placeholder-user.jpg'
+
+  {
+      nameEn: 'Ahmed Guerfel',
+      nameAr: 'أحمد قرفال',
+      roleEn: 'Founder & Strategic Advisor',
+      roleAr: 'المؤسس و المستشار الاستراتيجي  ',
+      bioShortEn: 'Multidisciplinary artist and choreographer based in Gabès with over 15 years of experience in cultural management.',
+      bioShortAr: 'فنان وكوريغراف متعدد التخصصات مقيم في قابس، يتمتع بخبرة تزيد عن 15 عاماً في الإدارة الثقافية.',
+      bioFullEn: 'Ahmed is the founder of Citizens Dancers South. He has led more than forty artistic projects and uses the body to challenge traditional aesthetics, exploring connections between cultural systems and social dynamics.',
+      bioFullAr: 'أحمد هو مؤسس "الراقصون المواطنون الجنوب". قاد أكثر من أربعين مشروعاً فنياً ويستخدم الجسد لتحدي الجماليات التقليدية، مستكشفاً الروابط بين النظم الثقافية والديناميكيات الاجتماعية.',
+      image: '/images/team/ahmedg.jpg'
     },
     {
-      nameEn: 'Khaled Trabelsi',
-      nameAr: 'خالد الترابلسي',
-      roleEn: 'Ecology Coordinator',
-      roleAr: 'منسق الإيكولوجيا',
-      bioShortEn: 'Oversees material ecology and sustainability workshops. Expert in local plant resources and zero-waste design practices.',
-      bioShortAr: 'يشرف على ورش المادة والإيكولوجيا والاستدامة. خبير في موارد النباتات المحلية وممارسات التصميم الخالي من النفايات.',
-      bioFullEn: 'Khaled brings deep knowledge of Gabes oasis ecology to the program. He guides participants in material research and sustainable crafting techniques using local biodiversity.',
-      bioFullAr: 'يجلب خالد معرفة عميقة بإيكولوجيا واحة قابس إلى البرنامج. يوجه المشاركين في بحث المواد وتقنيات الحرفة المستدامة باستخدام التنوع البيولوجي المحلي.',
-      image: '/placeholder-user.jpg'
+      nameEn: 'Aymen Gharbi',
+      nameAr: 'أيمن الغربي',
+      roleEn: 'Curator & Strategic Advisor',
+      roleAr: 'قيم فني ومستشار استراتيجي',
+      bioShortEn: 'Architect-trained curator working at the intersection of art, technology, and heritage.',
+      bioShortAr: 'قيم فني مهندس معماري يعمل في تقاطع الفن والتكنولوجيا والتراث.',
+      bioFullEn: 'Co-director of INTERFERENCE Tunis and SEE DJERBA, Aymen explores how digital installations can become tools for storytelling and reclaiming urban environments.',
+      bioFullAr: 'مدير مشارك لمشاريع INTERFERENCE وSEE DJERBA، يستكشف أيمن كيف يمكن للتجهيزات الرقمية أن تصبح أدوات لسرد القصص واستعادة البيئات الحضرية.',
+      image: '/images/team/aymeng.jpeg'
     },
     {
-      nameEn: 'Nour El Houda',
-      nameAr: 'نور الهدى',
-      roleEn: 'Arts Assistant',
-      roleAr: 'مساعدة الفنون',
-      bioShortEn: 'Supports contemporary arts practice module. Emerging visual artist specializing in experimental media.',
-      bioShortAr: 'تدعم وحدة الممارسة الفنية المعاصرة. فنانة تشكيلية ناشئة متخصصة في الوسائط التجريبية.',
-      bioFullEn: 'Nour is a rising star in Tunisian contemporary art scene. She facilitates studio practice and mentorship sessions, drawing from her own award-winning experimental work.',
-      bioFullAr: 'نور نجمة صاعدة في المشهد الفني المعاصر التونسي. تسهل الممارسة الاستوديو وجلسات التوجيه، مستمدة من عملها التجريبي الحائز على جوائز.',
-      image: '/placeholder-user.jpg'
+      nameEn: 'Mohamed Amine Hammouda',
+      nameAr: 'محمد أمين حمودة',
+      roleEn: 'Visual Artist & Strategic Advisor',
+      roleAr: 'فنان تشكيلي ومستشار استراتيجي',
+      bioShortEn: 'Visual artist and teacher focusing on the natural resources and ecological systems of Gabès.',
+      bioShortAr: 'فنان تشكيلي ومدرس يركز على الموارد الطبيعية والنظم الإيكولوجية في قابس.',
+      bioFullEn: 'His work highlights the potential of the oasis through handmade dyes and fibers, reviving lost stories that existed before industrialization.',
+      bioFullAr: 'يسلط عمله الضوء على إمكانات الواحة من خلال الأصباغ والألياف المصنوعة يدويًا، محيياً القصص المفقودة التي كانت موجودة قبل التصنيع.',
+      image: '/images/team/aminh.jpg'
     },
     {
-      nameEn: 'Fatima Gharsallah',
-      nameAr: 'فاطمة غرسالله',
-      roleEn: 'Craft Specialist',
-      roleAr: 'خبيرة الحرف',
-      bioShortEn: 'Master artisan leading craft & knowledge module. Preserves South Tunisian traditional techniques.',
-      bioShortAr: 'حرفية رئيسية تقود وحدة الحرفة والمعرفة. تحافظ على التقنيات التقليدية في جنوب تونس.',
-      bioFullEn: 'Fatima represents generations of craft knowledge from South Tunisia. She teaches heritage techniques adapted for contemporary ecological design.',
-      bioFullAr: 'تمثل فاطمة أجيالاً من معرفة الحرفة في جنوب تونس. تعلم تقنيات تراثية معدلة للتصميم الإيكولوجي المعاصر.',
-      image: '/placeholder-user.jpg'
+      nameEn: 'Hedya Wannen',
+      nameAr: 'هادية ونان',
+      roleEn: 'Finance Manager',
+      roleAr: 'المديرة المالية',
+      bioShortEn: 'Specialist in financial management for NGOs with expertise in budget oversight and financial reporting.',
+      bioShortAr: 'متخصصة في الإدارة المالية للمنظمات غير الحكومية مع خبرة في الرقابة على الميزانية والتقارير المالية.',
+      bioFullEn: 'Hedya plays a central role in structuring the organization’s financial systems, ensuring transparency, sustainability, and efficiency across DCS operations.',
+      bioFullAr: 'تلعب هدية دوراً مركزياً في هيكلة النظم المالية للمنظمة، مما يضمن الشفافية والاستدامة والكفاءة في جميع عمليات الجمعية.',
+      image: '/images/team/hediaw.png'
     },
     {
-      nameEn: 'Youssef Ben Salem',
-      nameAr: 'يوسف بن سالم',
-      roleEn: 'Administrative Coordinator',
-      roleAr: 'منسق إداري',
-      bioShortEn: 'Handles logistics, participant coordination, and program administration.',
-      bioShortAr: 'يتولى اللوجستيك والتنسيق مع المشاركين والإدارة.',
-      bioFullEn: 'Youssef ensures smooth operations across all program phases. Experienced in cultural event management and participant support.',
-      bioFullAr: 'يضمن يوسف سلاسة العمليات في جميع مراحل البرنامج. ذو خبرة في إدارة الفعاليات الثقافية ودعم المشاركين.',
-      image: '/placeholder-user.jpg'
+      nameEn: 'Mohamed Belayedi',
+      nameAr: ' محمد بالعيادي',
+      roleEn: 'comunication and Ecosystem Department Lead',
+      roleAr: 'رئيس قسم الإتصال و العلاقات',
+      bioShortEn: 'Software Engineering student and community manager focused on social inclusion through art.',
+      bioShortAr: 'طالب هندسة برمجيات ومدير مجتمع يركز على الإدماج الاجتماعي من خلال الفن.',
+      bioFullEn: 'Mohamed leads the Ecosystem Department and Community Management, using art and movement to promote youth empowerment and meaningful community contribution.',
+      bioFullAr: 'يقود محمد قسم النظام البيئي وإدارة المجتمع، مستخدماً الفن والحركة لتعزيز تمكين الشباب والمساهمة المجتمعية الهادفة.',
+      image: '/images/team/mohamedb.png'
     },
     {
-      nameEn: 'Lina Karray',
-      nameAr: 'لينا قراي',
-      roleEn: 'Communication Manager',
-      roleAr: 'مديرة التواصل',
-      bioShortEn: 'Manages outreach, documentation, and public presentation for the program.',
-      bioShortAr: 'تدير التواصل والتوثيق والعروض العامة للبرنامج.',
-      bioFullEn: 'Lina specializes in cultural communication and digital storytelling. She documents the program journey and connects it with wider audiences.',
-      bioFullAr: 'تتخصص لينا في التواصل الثقافي والسرد الرقمي. توثق رحلة البرنامج وتربطه بالجمهور الأوسع.',
-      image: '/placeholder-user.jpg'
+      nameEn: 'Anis Amorri',
+      nameAr: 'أنيس عمري',
+      roleEn: 'People & Culture Manager',
+      roleAr: 'مدير قسم الموارد البشرية والثقافة',
+      bioShortEn: 'Expert in human resources and organizational well-being with a background in music and tourism.',
+      bioShortAr: 'خبير في الموارد البشرية والرفاه التنظيمي مع خلفية في الموسيقى والسياحة.',
+      bioFullEn: 'Anis fosters a collaborative organizational environment, supporting team development and building a creative, people-centered workplace culture.',
+      bioFullAr: 'يعمل أنيس على تعزيز بيئة تنظيمية تعاونية، ويدعم تطوير الفريق وبناء ثقافة عمل إبداعية تركز على الإنسان.',
+      image: '/images/team/anisa.jpg'
+    },
+  {
+      nameEn: 'Ameni Belgacem',
+      nameAr: 'أماني بلقاسم',
+      roleEn: 'Program Administrative Assistant',
+      roleAr: 'مساعدة إدارية للبرامج',
+      bioShortEn: 'Youth leader and social impact strategist focused on professional development and national programs.',
+      bioShortAr: 'قائدة شبابية واستراتيجية أثر اجتماعي تركز على التطوير المهني والبرامج الوطنية.',
+      bioFullEn: 'Ameni connects global opportunities with local transformation. At DCS, she contributes to the planning and implementation of impactful programs through strategic planning and operational management.',
+      bioFullAr: 'تربط أماني الفرص العالمية بالتحول المحلي. في الجمعية، تساهم في تخطيط وتنفيذ البرامج المؤثرة من خلال التخطيط الاستراتيجي والإدارة التشغيلية.',
+      image: '/images/team/amenib.jpeg'
+    },
+    {
+      nameEn: 'Jassem Belayadi',
+      nameAr: 'جاسم بالعيادي',
+      roleEn: 'Logistics Coordinator & Tech Lead',
+      roleAr: 'المنسق اللوجستي و المسوول التقني',
+      bioShortEn: 'Mathematics graduate passionate about cultural logistics, light, and sound technology.',
+      bioShortAr: 'خريج رياضيات وشغوف باللوجستيك الثقافي وتقنيات الإضاءة والصوت.',
+      bioFullEn: 'Jassem has been involved in over 30 residencies and 5 festivals. He manages administrative documentation and ensures technical excellence in artistic projects.',
+      bioFullAr: 'شارك جاسم في أكثر من 30 إقامة فنية و5 مهرجانات. يدير الوثائق الإدارية ويضمن التميز التقني في المشاريع الفنية.',
+      image: '/images/team/jassemb.jpg'
+    },
+    {
+      nameEn: 'Amira Bouallague',
+      nameAr: 'أميرة بوعلاق',
+      roleEn: 'Financial Assistant',
+      roleAr: 'مساعدة مالية',
+      bioShortEn: 'Business Administration specialist with a background in banking and credit management.',
+      bioShortAr: 'متخصصة في إدارة الأعمال مع خلفية في العمل المصرفي وإدارة القروض.',
+      bioFullEn: 'Amira manages payments, financial archiving, and compliance verification. Her structured approach ensures the transparency of DCS financial operations.',
+      bioFullAr: 'تدير أميرة المدفوعات والأرشفة المالية والتحقق من الامتثال. يضمن نهجها المنظم شفافية العمليات المالية للجمعية.',
+      image: '/images/team/amirab.jpg'
+    },
+    {
+      nameEn: 'Mohamed Ali Choura',
+      nameAr: 'محمد علي شورى',
+      roleEn: 'Logistics Assistant',
+      roleAr: 'مساعد لوجستي',
+      bioShortEn: 'Dedicated logistics assistant with experience in international festivals and community projects.',
+      bioShortAr: 'مساعد لوجستي متفانٍ ذو خبرة في المهرجانات الدولية والمشاريع المجتمعية.',
+      bioFullEn: 'Mohamed Ali contributes to the organization of artistic events and civil society initiatives, known for his effective communication with teams and artists.',
+      bioFullAr: 'يساهم محمد علي في تنظيم الفعاليات الفنية ومبادرات المجتمع المدني، ويتميز بتواصله الفعال مع الفرق والفنانين.',
+      image: '/images/team/dalich.jpeg'
     }
   ]
 
@@ -120,7 +165,7 @@ export function TeamPage({}: TeamPageProps) {
     programTeam: language === 'en' ? 'Program Team' : 'فريق البرنامج',
     organigram: language === 'en' ? 'Organigramme' : 'الرسم التنظيمي',
     meetOurTeam: language === 'en' ? 'Meet Our Team' : 'تعرف على فريقنا',
-    viewCV: language === 'en' ? 'View CV' : 'عرض السيرة الذاتية'
+
   } as const
 
   return (
@@ -128,7 +173,7 @@ export function TeamPage({}: TeamPageProps) {
   {/* Slogan Section - Full Width at Top with negative margin to offset navbar padding */}
     <section
       id="slogan"
-      className="relative min-h-[80vh] md:min-h-[90vh] lg:min-h-[100vh] overflow-hidden -mt-32"
+className="relative min-h-[100vh] sm:min-h-[90vh] md:min-h-[90vh] lg:min-h-[100vh] overflow-hidden -mt-32"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -145,7 +190,7 @@ export function TeamPage({}: TeamPageProps) {
 
       {/* Content container - Using absolute positioning */}
       <div className="absolute bottom-0 left-0 right-0 z-10">
-        <div className="container mx-auto px-4 pb-12 md:pb-16 lg:pb-20">
+        <div className="container mx-auto px-4 pt-20 md:pt-24 pb-12 md:pb-16 lg:pb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Left Column for Arabic */}
             <div className={`${isArabic ? 'block' : 'hidden md:block'}`}>
@@ -189,7 +234,7 @@ export function TeamPage({}: TeamPageProps) {
           
           
           {/* Organigramme Section */}
-          <section className="mb-32 text-center">
+          <section className="mb-40 text-center pt-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-blue-600 drop-shadow-lg text-center leading-tight">
               <>
                 {language === 'en' ? 'Organigram' : 'الهيكل التنظيمي'}
@@ -221,11 +266,11 @@ export function TeamPage({}: TeamPageProps) {
                 return (
                   <Card 
                     key={index} 
-                    className="group border-0 bg-card/80 backdrop-blur-sm hover:bg-white/90 shadow-xl hover:shadow-2xl hover:-translate-y-6 transition-all duration-700 cursor-pointer overflow-hidden"
+className="border-0 bg-card/80 backdrop-blur-sm shadow-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300"
                   >
-                    <CardHeader className="pb-4 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-all duration-700" />
-                      <div className="relative z-10 mx-auto mb-8 w-32 h-32 md:w-36 md:h-36 ring-8 ring-transparent group-hover:ring-primary/40 transition-all duration-700 group-hover:scale-110">
+                    <CardHeader className="pb-4 relative overflow-hidden flex flex-col items-center justify-center">
+                      {/* Removed hover gradient overlay */}
+                    <div className="relative z-10 mb-8 w-40 h-40 md:w-48 md:h-48 ring-12 ring-transparent">
                         <Avatar className="w-full h-full border-6 border-white/80 shadow-2xl">
                           <Image 
                             src={member.image} 
@@ -235,26 +280,21 @@ export function TeamPage({}: TeamPageProps) {
                           />
                         </Avatar>
                       </div>
-                      <CardTitle className="text-2xl md:text-3xl font-bold text-center mb-4 leading-tight group-hover:text-primary transition-all duration-500">
-                        {name}
-                      </CardTitle>
-                      <Badge className="mx-auto px-8 py-3 text-base uppercase font-bold tracking-wider bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-xl">
-                        {role}
-                      </Badge>
+                      <div className="text-center space-y-2">
+                        <CardTitle className="text-xl md:text-2xl font-bold leading-tight">
+                          {name}
+                        </CardTitle>
+                        <Badge className="px-6 py-2 text-sm uppercase font-bold tracking-wider bg-blue-600 text-white shadow-xl">
+                          {role}
+                        </Badge>
+                      </div>
                     </CardHeader>
-                    <CardContent className="px-8 pb-8">
+                    <CardContent className="px-8 pb-8 flex flex-col justify-center min-h-[120px]">
                       <CardDescription className="text-center leading-relaxed text-lg text-foreground/80">
                         {bioShort}
                       </CardDescription>
                     </CardContent>
-                    <CardFooter className="pt-0 px-8 pb-8">
-                      <Button 
-                        onClick={() => setSelectedMember(member)}
-                        className="w-full h-14 font-bold uppercase tracking-wider text-base shadow-2xl hover:shadow-primary/30 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 transition-all duration-300"
-                      >
-                        {t.viewCV}
-                      </Button>
-                    </CardFooter>
+
                   </Card>
                 )
               })}
@@ -263,34 +303,7 @@ export function TeamPage({}: TeamPageProps) {
         </div>
       </section>
 
-      {/* CV Modal */}
-      <Dialog open={!!selectedMember} onOpenChange={() => setSelectedMember(null)}>
-        <DialogContent className="max-w-2xl p-8 max-h-[85vh] overflow-hidden bg-gradient-to-b from-background to-muted">
-          <DialogHeader className="pb-6">
-            <DialogTitle className="text-3xl font-bold mb-2">
-              {selectedMember ? (language === 'en' ? selectedMember.nameEn : selectedMember.nameAr) : ''}
-            </DialogTitle>
-            <Badge variant="outline" className="uppercase font-semibold text-lg px-6 py-2">
-              {selectedMember ? (language === 'en' ? selectedMember.roleEn : selectedMember.roleAr) : ''}
-            </Badge>
-          </DialogHeader>
-          <div className="max-h-[50vh] overflow-y-auto px-4 space-y-6">
-            <DialogDescription className="text-xl leading-relaxed whitespace-pre-wrap text-foreground/90">
-              {selectedMember ? (language === 'en' ? selectedMember.bioFullEn : selectedMember.bioFullAr) : ''}
-            </DialogDescription>
-          </div>
-          <div className="flex justify-center mt-8">
-            <Avatar className="w-32 h-32 ring-8 ring-primary/20 shadow-2xl">
-              <Image 
-                src={selectedMember?.image || '/placeholder-user.jpg'} 
-                alt=""
-                fill
-                className="object-cover rounded-full"
-              />
-            </Avatar>
-          </div>
-        </DialogContent>
-      </Dialog>
+
 
       {/* Organigramme Modal */}
       <Dialog open={organigramOpen} onOpenChange={setOrganigramOpen}>

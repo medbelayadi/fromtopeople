@@ -50,8 +50,9 @@ export default function Contact() {
   const data = language === 'en' ? contactData.en : contactData.ar
 
   return (
-    <main dir={language === 'ar' ? 'rtl' : 'ltr'} className={language === 'ar' ? 'font-arabic' : ''}>
+    <main dir={language === 'ar' ? 'rtl' : 'ltr'} className={`font-arabic pt-32 sm:pt-40 lg:pt-44 ${language === 'ar' ? 'font-arabic' : ''}`}>
       <Header />
+
 
       <div className="container mx-auto px-4 py-20">
 
@@ -122,7 +123,7 @@ export default function Contact() {
                     </div>
                     <div className={language === 'ar' ? 'text-right' : 'text-left'}>
                       <p className="font-medium">{data.info.phone}</p>
-                      <p className="text-foreground/70">+216 XX XXX XXX</p>
+                      <p className="text-foreground/70">+216 51 634 426</p>
                     </div>
                   </div>
                   <div className={`flex items-center gap-4 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
@@ -132,7 +133,7 @@ export default function Contact() {
                     <div className={language === 'ar' ? 'text-right' : 'text-left'}>
                       <p className="font-medium">{data.info.address}</p>
                       <p className="text-foreground/70">
-                        {language === 'ar' ? 'تونس، تونس' : 'Tunis, Tunisia'}
+                        {language === 'ar' ? 'قابس، تونس' : 'Gabes, Tunisia'}
                       </p>
                     </div>
                   </div>
