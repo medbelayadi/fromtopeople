@@ -46,6 +46,34 @@ export function ScientificCommunityPage({ language }: ScientificCommunityPagePro
         '/images/bootcamps/ham004.jpeg'
       ]
     },
+    {
+  nameEn: 'Gmar Naceur',
+  nameAr: 'قمر ناصر',
+  expertiseEn: 'Artisan in Plant Fibers',
+  expertiseAr: 'حرفية مختصة في الألياف النباتية',
+  bioEn: 'Gmar Naceur is a craftswoman specializing in plant fibers, focusing on the design and production of a variety of traditional handcrafted objects such as umbrellas, baskets (couffa), fans, and skouj. Her practice is rooted in preserving the authenticity of traditional craftsmanship while continuously improving the quality of her products to meet contemporary market demands. Through her experience, she has built strong relationships with clients and participated in numerous regional, local, and national festivals, where she has showcased her work and contributed to promoting Tunisian traditional crafts. Alongside her professional activity, she has been an active scout leader for the past three years, supporting the education and development of children and youth by fostering their leadership and life skills. She is also an engaged member of the Association for Oasis Preservation, contributing to initiatives that aim to protect environmental heritage and strengthen community-based work.',
+  bioAr: 'أنا قمر ناصر، أنشط في مجال الحرف اليدوية المختصة في الألياف النباتية، حيث أختص في تصميم وصناعة منتجات تقليدية متنوعة على غرار المظلات، القفاف (القوفة)، المراوح والسكوج، مع الحرص على الحفاظ على الطابع التراثي وتطوير الجودة بما يتماشى مع متطلبات السوق. وقد مكّنتني خبرتي في هذا المجال من كسب ثقة الحرفاء والمشاركة في عدة مهرجانات جهوية ومحلية ووطنية، حيث عرضت منتوجاتي وساهمت في التعريف بالحرف التقليدية التونسية. إلى جانب نشاطي المهني، أعمل قائدة في الحركة الكشفية منذ ثلاث سنوات، أساهم من خلالها في تأطير الأطفال والناشئة وتنمية مهاراتهم التربوية والقيادية. كما أنني عضوة فاعلة في جمعية صيانة الواحة، أشارك في الأنشطة والمبادرات الهادفة إلى المحافظة على التراث البيئي وتعزيز العمل الجمعياتي.',
+  mainImage: '/images/participants/gmar-naceur.jpg',
+  workshopImages: [
+    '/images/participants/gmar-naceur1.jpeg',
+    '/images/participants/gmar-naceur2.jpeg',
+    '/images/participants/gmar-naceur3.jpeg'
+  ]
+},
+{
+  nameEn: 'Achwek Bechraoui',
+  nameAr: 'أشواق بشراوي',
+  expertiseEn: 'Bio-Industry Engineer & Cluster Development Officer',
+  expertiseAr: 'مهندسة في الصناعات الحيوية ووكيلة تطوير الأقطاب',
+  bioEn: 'Achwek Bechraoui is a bio-industry engineer and Cluster Development Officer within the “Creative Tunisia” project implemented by UNIDO. She specializes in developing value chains for plant-based fibers in Gabès, contributing to the structuring and sustainability of local production ecosystems. She is also involved in the co-management of the “Gabès Design Hub,” where she supports creative initiatives and promotes environmentally conscious practices. With a background in fostering innovation at the Tunisian Agency for the Promotion of Industry, she works on bridging traditional crafts with modern industrial processes. As a member of the scientific community of the “From & To People” program, she contributes to strengthening sustainable craft practices and enhancing the value of local materials through training and collaborative projects.',
+  bioAr: 'أشواق بشراوي مهندسة في الصناعات الحيوية ووكيلة تطوير الأقطاب ضمن مشروع “تونس الإبداعية” التابع لمنظمة اليونيدو. تتخصص في تطوير سلاسل القيمة للألياف النباتية في قابس، مساهمةً في هيكلة النظم الإنتاجية المحلية وتعزيز استدامتها. وتشارك في الإدارة المشتركة لـ “قطب التصميم بقابس”، حيث تدعم المشاريع الإبداعية وتروّج للممارسات المستدامة. وبفضل خبرتها في دعم الابتكار ضمن الوكالة التونسية للنهوض بالصناعة، تعمل على الربط بين الحرف التقليدية والصناعة الحديثة. وهي عضو في المجتمع العلمي لبرنامج “من وإلى الناس”، حيث تساهم في تعزيز الممارسات الحرفية المستدامة وتثمين المواد المحلية من خلال التكوين والمشاريع التشاركية.',
+  mainImage: '/images/participants/achwek-bechraoui.jpg',
+  workshopImages: [
+    '/images/bootcamps/achwek1.jpeg',
+    '/images/bootcamps/achwek2.jpeg',
+    '/images/bootcamps/achwek3.jpeg'
+  ]
+}
   ]
 
   return (
@@ -73,7 +101,7 @@ export function ScientificCommunityPage({ language }: ScientificCommunityPagePro
           <div key={index} className="w-screen py-20 bg-gradient-to-b even:from-slate-50 even:to-white odd:bg-white/70">
             <div className="w-full grid grid-cols-1 lg:grid-cols-[1fr_2fr] min-h-[60vh] md:min-h-[70vh] lg:h-[70vh] max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-32">
               {/* Image Column */}
-              <div className={`relative overflow-hidden aspect-[4/5] max-h-[500px] mx-auto ${isEven ? 'lg:order-2' : ''}`}>
+              <div className="relative overflow-hidden aspect-[4/5] max-h-[500px] mx-auto">
                 <Image
                   src={expert.mainImage}
                   alt={name}
@@ -86,7 +114,7 @@ export function ScientificCommunityPage({ language }: ScientificCommunityPagePro
               </div>
 
               {/* Content Column */}
-              <div className={`relative p-4 lg:p-8 xl:p-12 2xl:p-16 pt-4 lg:pt-6 flex flex-col pb-6 lg:pb-12 mb-6 lg:mb-12 ${isEven ? 'lg:text-right lg:pl-0 lg:pr-12' : 'lg:pr-0 lg:pl-12'}`}>
+              <div className="relative overflow-hidden aspect-[4/5] max-h-[500px] mx-auto">
                 <Badge className="mb-4 px-4 py-1.5 text-sm bg-gradient-to-r from-primary to-secondary w-fit uppercase tracking-wider font-semibold">
                   {expertise}
                 </Badge>

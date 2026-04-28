@@ -12,28 +12,35 @@ export function SloganSection() {
   return (
     <section
       id="slogan"
-      className="relative min-h-[60vh] md:min-h-[80vh] overflow-hidden"
+      className="relative min-h-[90vh] md:min-h-[80vh] overflow-hidden"
     >
-      {/* Background Image */}
+      {/* Background Image - Desktop */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 hidden md:block"
         style={{
           backgroundImage: "url('/images/homepage/home1.jpeg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       />
+      {/* Background Image - Mobile */}
+      <div
+        className="absolute inset-0 z-0 md:hidden"
+        style={{
+          backgroundImage: "url('/images/homepage/home11.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'top',
+        }}
+      />
 
       <div className="container mx-auto px-4 relative z-10 h-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 h-full min-h-[60vh] md:min-h-[80vh]">
+        <div className="grid grid-cols-1 md:grid-cols-2 h-full min-h-[90vh] md:min-h-[80vh]">
 
           {/* Left Column for Arabic */}
-          <div className={`flex flex-col justify-center ${isArabic ? 'items-start' : 'hidden md:flex'}`}>
+          <div className={`flex flex-col justify-start md:justify-center pt-12 md:pt-0 ${isArabic ? 'items-start' : 'hidden md:flex'}`}>
             {isArabic && (
               <div className="max-w-lg text-right font-arabic">
-                <h2 className="text-white font-bold text-4xl md:text-5xl lg:text-6xl leading-tight drop-shadow-lg">
-                  من وإلى الناس
-                </h2>
+               
                 <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed font-semibold mt-4 drop-shadow-md">
                  يسعى البرنامج لإعادة تخيّل المستقبل بشكل مستدام عبر الفن والمعرفة الأصيلة، مستكشفًا حلولًا مبتكرة للأزمات البيئية والاجتماعية والاقتصادية، ومعيدًا بناء الروابط الحيوية بين الإنسان والطبيعة من خلال تدخل بشري واعٍ ومسؤول.
                 </p>
@@ -41,7 +48,7 @@ export function SloganSection() {
                   <Button 
                     className="bg-primary text-white font-semibold px-10 py-7 text-lg rounded-sm hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
                   >
-                    قدم الآن
+                    المزيد
                   </Button>
                 </Link>
               </div>
@@ -49,12 +56,10 @@ export function SloganSection() {
           </div>
 
           {/* Right Column for English */}
-          <div className={`flex flex-col justify-center ${!isArabic ? 'items-end' : ''}`}>
+          <div className={`flex flex-col justify-start md:justify-center pt-12 md:pt-0 ${!isArabic ? 'items-end' : ''}`}>
             {!isArabic && (
               <div className="max-w-lg text-right">
-                <h2 className="text-white font-bold text-4xl md:text-5xl lg:text-6xl leading-tight drop-shadow-lg">
-                  From and to the People
-                </h2>
+
                 <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed font-semibold mt-4 drop-shadow-md">
                   The program aims to reimagine the future sustainably through art and authentic knowledge, exploring innovative solutions to environmental, social, and economic challenges, and rebuilding the vital connections between humans and nature through conscious and responsible human intervention.
                 </p>
@@ -62,7 +67,7 @@ export function SloganSection() {
                   <Button 
                     className="bg-primary text-white font-semibold px-10 py-7 text-lg rounded-sm hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
                   >
-                    Apply Now
+                    Learn More
                   </Button>
                 </Link>
               </div>

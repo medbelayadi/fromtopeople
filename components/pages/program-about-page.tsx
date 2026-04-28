@@ -85,7 +85,7 @@ const labels = {
     readyToApply: 'Ready to Apply?',
     applyText: 'We are looking for passionate artists, designers, and makers driven by curiosity and creativity.',
     applyButton: 'Apply Now',
-    journeyTitle: '10-Month Journey',
+    journeyTitle: '18-Month Journey',
   },
   ar: {
     programTitle: 'هيكل البرنامج',
@@ -103,7 +103,7 @@ const labels = {
     readyToApply: 'هل أنت مستعد للتقديم؟',
     applyText: 'نحتاج فنانين وديزاينرز وحرفيين مثاليين مدفوعين بالشغف والفضول.',
     applyButton: 'قدم الآن',
-    journeyTitle: 'رحلة 10 أشهر',
+    journeyTitle: 'رحلة 18 شهر',
   },
 }
 
@@ -130,7 +130,7 @@ const aboutContent = {
     aboutLabel: 'حول',
     vision: 'الرؤية والفلسفة',
     visionText:
-      'يستند برنامج "من وإلى الناس" إلى الاعتقاد بأن الممارسة الفنية والوعي الإيكولوجي والحرفية التقليدية هي طرق مترابطة للمعرفة والوجود في العالم. يجمع البرنامج فنانين وديزاينرز وحرفيين وممارسين من خلفيات متنوعة للإنشاء والتعلم والتحول معاً.',
+      'يستند برنامج "من وإلى الناس" إلى الاعتقاد بأن الممارسة الفنية والوعي الإيكولوجي والحرفية التقليدية هي طرق مترابطة للمعرفة والوجود في العالم. يجمع البرنامج فنانين مصممين وحرفيين وممارسين من خلفيات متنوعة للإنشاء والتعلم والتحول معاً.',
     roots: 'متجذر في جنوب تونس',
     rootsText:
       'يقع البرنامج في جنوب تونس ويستقي من التراث الثقافي والإيكولوجي الغني للمنطقة. نحن نعمل مع المجتمعات المحلية، نحترم أنظمة المعرفة التقليدية، وننشئ مساحات حيث تلتقي الممارسة المعاصرة بالحكمة الأسلافية.',
@@ -278,7 +278,7 @@ export function ProgramAboutPage({ language }: ProgramAboutPageProps) {
       <div className="container mx-auto px-4 mb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {[
-            { label: text.duration, value: '10 Months' },
+            { label: text.duration, value: '18 Months' },
             { label: text.participants, value: text.count },
             { label: text.location, value: text.tunisia },
             { label: text.investment, value: text.price },
@@ -291,43 +291,59 @@ export function ProgramAboutPage({ language }: ProgramAboutPageProps) {
         </div>
       </div>
 
-      {/* Modules - Horizontal Scroll on Mobile */}
-      <div className="container mx-auto px-4">
-        <div className="flex flex-row overflow-x-auto gap-6 pb-4 max-w-5xl mx-auto snap-x snap-mandatory scrollbar-thin scrollbar-thumb-primary/30 scrollbar-track-transparent">
-          {modules.map((module, i) => (
-            <div key={i} className="group relative w-80 md:w-96 flex-shrink-0 snap-center">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/5 via-primary/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
-              <div className="relative bg-white border border-border rounded-lg overflow-hidden">
-                <div className="h-1 bg-gradient-to-r from-primary via-primary/60 to-transparent" />
-                <div className="p-8 md:p-10">
-                  <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center w-16 h-16 bg-primary rounded-lg text-white text-2xl font-bold">
-                        {i + 1}
-                      </div>
-                    </div>
-                    <div className={`flex-1 ${language === 'ar' ? 'text-right' : ''}`}>
-                      <p className="text-sm font-semibold text-primary/70 uppercase tracking-wider mb-2">{module.months}</p>
-                      <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                        {module.title}
-                      </h3>
-                      <p className="text-foreground/70 leading-relaxed mb-6">{module.description}</p>
-                      <div className="grid grid-cols-2 gap-3">
-                        {module.highlights.map((highlight, j) => (
-                          <div key={j} className="flex items-center gap-2">
-                            <Check size={18} className="text-primary flex-shrink-0" />
-                            <span className="text-sm text-foreground/80">{highlight}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+{/* Modules - 2x2 Grid */}
+<div className="container mx-auto px-4">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+    {modules.slice(0, 4).map((module, i) => (
+      <div key={i} className="group relative">
+        
+        <div className="absolute -inset-4 bg-gradient-to-r from-primary/5 via-primary/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
+
+        <div className="relative bg-white border border-border rounded-lg overflow-hidden h-full">
+          <div className="h-1 bg-gradient-to-r from-primary via-primary/60 to-transparent" />
+
+          <div className="p-8 md:p-10">
+            <div className="flex items-start gap-6">
+
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center w-16 h-16 bg-primary rounded-lg text-white text-2xl font-bold">
+                  {i + 1}
                 </div>
               </div>
+
+              <div className={`flex-1 ${language === 'ar' ? 'text-right' : ''}`}>
+                <p className="text-sm font-semibold text-primary/70 uppercase tracking-wider mb-2">
+                  {module.months}
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                  {module.title}
+                </h3>
+
+                <p className="text-foreground/70 leading-relaxed mb-6">
+                  {module.description}
+                </p>
+
+                <div className="grid grid-cols-2 gap-3">
+                  {module.highlights.map((highlight, j) => (
+                    <div key={j} className="flex items-center gap-2">
+                      <Check size={18} className="text-primary flex-shrink-0" />
+                      <span className="text-sm text-foreground/80">
+                        {highlight}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
             </div>
-          ))}
+          </div>
+
         </div>
       </div>
+    ))}
+  </div>
+</div>
 
       {/* Timeline Visualization */}
       <div className="container mx-auto px-4 mt-20">
@@ -349,20 +365,7 @@ export function ProgramAboutPage({ language }: ProgramAboutPageProps) {
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 mt-20">
-        <div className={`max-w-2xl ${language === 'ar' ? 'text-right' : 'text-center'} mx-auto`}>
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-            {text.readyToApply}
-          </h2>
-          <p className="text-foreground/70 mb-8">
-            {text.applyText}
-          </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-6 text-base rounded-sm">
-            {text.applyButton}
-          </Button>
-        </div>
-      </div>
+
     </section>
   )
 }

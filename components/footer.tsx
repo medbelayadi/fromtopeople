@@ -1,4 +1,4 @@
-// footer.tsx
+import Image from 'next/image'
 import { GeometricPattern, DiagonalLines } from './geometric-pattern'
 
 interface FooterProps {
@@ -10,28 +10,28 @@ const footerContent = {
     about: 'From & To People is dedicated to building connections and fostering community engagement through innovative programs.',
     quickLinks: 'Quick Links',
     contact: 'Contact',
-    address: 'Your Address Here',
+    address: 'Med Ali Street, 6000 Gabes Medina, Gabes, Tunisia, 6000',
     email: 'contact@fromtopeople.com',
     follow: 'Follow Us',
     social: [
-      { name: 'Twitter', url: '#' },
-      { name: 'LinkedIn', url: '#' },
-      { name: 'Facebook', url: '#' },
-      { name: 'Instagram', url: '#' },
+      { name: 'Twitter', url: 'https://x.com/adcs_org' },
+      { name: 'LinkedIn', url: 'https://www.linkedin.com/company/86199626' },
+      { name: 'Facebook', url: 'https://www.facebook.com/ASS.DCS?locale=fr_FR' },
+      { name: 'Instagram', url: 'https://www.instagram.com/fromandtopeople/' },
     ],
   },
   ar: {
     about: 'من وإلى الناس مكرسة لبناء الاتصالات وتعزيز المشاركة المجتمعية من خلال برامج مبتكرة.',
     quickLinks: 'روابط سريعة',
     contact: 'اتصل بنا',
-    address: 'عنوانك هنا',
+    address: 'شارع محمد علي 6000 قابس المدينة, قابس, تونس, 6000 ',
     email: 'contact@fromtopeople.com',
     follow: 'تابعنا',
     social: [
-      { name: 'تويتر', url: '#' },
-      { name: 'لينكدإن', url: '#' },
-      { name: 'فيسبوك', url: '#' },
-      { name: 'إنستجرام', url: '#' },
+      { name: 'تويتر', url: 'https://x.com/adcs_org' },
+      { name: 'لينكدإن', url: 'https://www.linkedin.com/company/86199626' },
+      { name: 'فيسبوك', url: 'https://www.facebook.com/ASS.DCS?locale=fr_FR' },
+      { name: 'إنستجرام', url: 'https://www.instagram.com/fromandtopeople/' },
     ],
   },
 }
@@ -59,25 +59,28 @@ export function Footer({ language }: FooterProps) {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/85 to-primary/90" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/20" />
       
-      
-      
       {/* Diagonal lines pattern */}
       <DiagonalLines className="text-white opacity-[0.03]" />
       
-      
       <div className="container mx-auto px-4 relative z-10">
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About Section with decorative frame */}
           <div className="space-y-4 relative group">
             <div className="absolute -inset-4 bg-white/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative">
-              <div className="w-12 h-12 border border-white/20 mb-4 flex items-center justify-center">
-                <div className="w-6 h-6 bg-white/40 transform rotate-45" />
+
+              <div className="w-full h-48 md:h-56 lg:h-64 rounded-lg shadow-2xl overflow-hidden border border-white/20">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13179.530057!2d10.098!3d34.575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd2b5c91a5b57b3%3A0x1234567890abcdef!2sV4M2%2B327%2C%20Boulevard%20Mohammed%20Ali%2C%20Gabes!5e0!3m2!1sen!2stn!4v1722000000000!5m2!1sen!2stn"
+                  className="w-full h-full"
+                  style={{border:0}}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Location Map"
+                />
               </div>
-              <p className="text-white/85 text-sm leading-relaxed">
-                {content.about}
-              </p>
             </div>
           </div>
 
@@ -89,10 +92,11 @@ export function Footer({ language }: FooterProps) {
             </h4>
             <ul className="space-y-3 text-sm">
               {[
-                { href: '#program', label: language === 'ar' ? 'البرنامج' : 'Program' },
-                { href: '#about', label: language === 'ar' ? 'حول' : 'About' },
-                { href: '#participants', label: language === 'ar' ? 'المشاركون' : 'Participants' },
-                { href: '#news', label: language === 'ar' ? 'الأخبار' : 'News' },
+                { href: '/', label: language === 'ar' ? 'الرئيسية' : 'Home' },
+                { href: '/program', label: language === 'ar' ? 'البرنامج' : 'Program' },
+                { href: '/community', label: language === 'ar' ? 'المجتمع' : 'Community' },
+                { href: '/news', label: language === 'ar' ? 'الأخبار' : 'News' },
+                { href: '/contact', label: language === 'ar' ? 'تواصل معنا' : 'Contact' },
               ].map((item, i) => (
                 <li key={i}>
                   <a
@@ -161,9 +165,39 @@ export function Footer({ language }: FooterProps) {
           </div>
         </div>
 
-        {/* Bottom Bar with geometric divider */}
-        <div className="relative">
-          <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-24 h-px bg-white/20" />
+        {/* Logos Sections */}
+        <div className="w-full mt-24 mb-6">
+          <div className={`flex flex-col items-center md:flex-row md:items-center md:justify-center lg:justify-between lg:items-end gap-4 md:gap-8 lg:gap-6 ${language === 'ar' ? 'lg:flex-row-reverse' : ''}`}>
+            <div className="flex-shrink-0 mb-8 md:mb-0">
+              <Image
+                src="/LOGOpng.png"
+                alt="Main logo"
+                width={140}
+                height={70}
+                className="h-12 md:h-16 lg:h-20 w-auto drop-shadow-2xl opacity-95 hover:opacity-100 transition-all duration-300"
+              />
+            </div>
+            <div className="flex items-center gap-4 md:gap-6 lg:gap-12">
+              <Image
+                src="/logodcs4.png"
+                alt="Partner logo DCS"
+                width={140}
+                height={70}
+                className="h-14 md:h-18 lg:h-24 w-auto drop-shadow-xl opacity-95 hover:opacity-100 transition-all duration-300"
+              />
+              <Image
+                src="/logodrosos4.png"
+                alt="Partner logo 2"
+                width={140}
+                height={70}
+                className="h-12 md:h-16 lg:h-20 w-auto drop-shadow-xl opacity-95 hover:opacity-100 transition-all duration-300"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-white/10">
           <div className={`flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-white/75 ${language === 'ar' ? 'md:flex-row-reverse' : ''}`}>
             <p className="relative">
               <span className="absolute -left-3 top-1/2 -translate-y-1/2 w-1 h-1 bg-white/40 rounded-full" />
@@ -171,13 +205,10 @@ export function Footer({ language }: FooterProps) {
             </p>
             <div className={`flex gap-8 text-xs uppercase tracking-wide ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
               <a href="#" className="text-white/80 hover:text-white transition-colors duration-200 relative group">
-                {language === 'ar' ? 'سياسة الخصوصية' : 'Privacy'}
+                {language === 'ar' ? ' العودة الى اعلى الصفحة' : 'top of the page'}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
               </a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors duration-200 relative group">
-                {language === 'ar' ? 'الشروط' : 'Terms'}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
-              </a>
+
             </div>
           </div>
         </div>

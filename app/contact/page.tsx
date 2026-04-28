@@ -123,7 +123,9 @@ export default function Contact() {
                     </div>
                     <div className={language === 'ar' ? 'text-right' : 'text-left'}>
                       <p className="font-medium">{data.info.phone}</p>
-                      <p className="text-foreground/70">+216 51 634 426</p>
+                      <p className="text-foreground/70" dir="ltr">
+                        +216 51 634 426
+                      </p>
                     </div>
                   </div>
                   <div className={`flex items-center gap-4 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>

@@ -4,44 +4,52 @@ interface NewsSectionProps {
 
 const news = {
   en: [
+        {
+        date: 'March 2026',
+        title: 'Follow-up Meeting with Participants during Ramadan',
+        excerpt: 'A follow-up session to review the program’s progress and co-develop the internal charter.',
+        image: '/images/news/ramadan03.jpg',
+    },
+
+        {
+         date: 'March 2026',
+         title: 'Launch of the Training Path through Palm Fiber Workshop',
+         excerpt: 'The training program of From & To People was launched through a hands-on palm fiber (saaf) workshop.',
+         image: '/images/news/saaf1.jpeg',
+    },
+
+
     {
       date: 'February 2026',
       title: 'Field Visits Recap',
       excerpt: 'Participants explored the artisanal ecosystem in Southern Tunisia, visiting Chenini oasis, Traditional Crafts Museum, local workshops, and wool processing factories, learning about local resources and sustainable craft practices.',
       image: '/images/news/visits.jpg',
     },
-    {
-      date: 'February 2026',
-      title: 'Applications Open',
-      excerpt: 'Emerging artists, designers, and artisans from southern Tunisia are invited to join the From & To People program and take part in a collective lab for contemporary art, traditional crafts, and sustainable design. Apply here: https://o-dcs.org/ar-form/',
-      image: '/images/news/opencall2.jpeg',
-    },
-    {
-      date: 'January 24, 2026',
-      title: 'Program Launch Session',
-      excerpt: 'Danseurs Citoyens Sud organized an introductory session to present the program, the selected participants, and the coordinating team, creating a space for interaction and building collaborative dynamics for the program journey.',
-      image: '/images/news/roncontre.jpg',
-    },
+
   ],
   ar: [
+        {
+      date: 'مارس 2026',
+      title: 'لقاء متابعة مع المشاركين خلال شهر رمضان',
+      excerpt: 'جلسة متابعة لمسار برنامج من وإلى الناس وتقدّم مراحله، مع العمل على صياغة الميثاق الداخلي.',
+      image: '/images/news/ramadan03.jpg',
+    },
+
+        {
+      date: 'مارس 2026',
+      title: 'افتتاح المسار التكويني من خلال رغّاطة السعف',
+      excerpt: 'انطلاق المسار التكويني لبرنامج من وإلى الناس عبر ورشة تطبيقية حول السعف.',
+      image: '/images/news/saaf1.jpeg',
+    },
+
     {
       date: 'فيفري 2026',
       title: 'ملخص الزيارات الميدانية',
       excerpt: 'استكشف المشاركون مكوّنات النظام الحيوي للصناعات الحرفية في جنوب تونس، بما في ذلك واحة شنني، متحف الصناعات التقليدية، ورش محلية، ومعمل الصوف والغزل، لتعزيز فهم الموارد المحلية والممارسات المستدامة.',
       image: '/images/news/visits.jpg',
     },
-    {
-      date: 'فيفري 2026',
-      title: 'فتح باب الترشحات',
-      excerpt: 'ندعو الفنانين والمصمّمين والحرفيين الناشئين في جنوب تونس للانضمام إلى برنامج من وإلى الناس والمشاركة في مختبر جماعي للفنون المعاصرة، الحرف اليدوية، والتصميم المستدام.',
-      image: '/images/news/opencall2.jpeg',
-    },
-    {
-      date: '24 جانفي 2026',
-      title: 'جلسة إطلاق البرنامج',
-      excerpt: 'نظّمت الراقصون المواطنون الجنوب جلسة تقديمية لتعريف المشاركين والفريق المشرف بالبرنامج، وتأسيس روابط تواصل وتعاون لضمان نجاح المسار التكويني وتحقيق أهدافه.',
-      image: '/images/news/roncontre.jpg',
-    },
+
+
   ],
 }
 

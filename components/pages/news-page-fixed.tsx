@@ -62,6 +62,43 @@ content: 'We held an Open Call for emerging artists, designers, and artisans fro
         '/images/news/opencall2.jpeg',
       ]
     },
+
+    {
+  id: 5,
+  date: 'March 2026',
+  category: 'Event',
+  title: 'Follow-up Meeting with Participants during Ramadan',
+  excerpt: 'A follow-up session to review the program’s progress and co-develop the internal charter.',
+  content: 'During the month of Ramadan, we held a meeting with participants of the “From & To People” program at the premises of Danseurs Citoyens Sud in Gabès.\n\nThis session was dedicated to reviewing the progress of the program since the launch meeting in January and the field visits conducted in February, as well as preparing for the upcoming training phase.\n\nPart of the session was also devoted to collectively drafting the program’s internal charter through a participatory approach involving all participants, contributing to the establishment of a shared framework based on collaboration and common values.',
+  gallery: [
+    '/images/news/ramadan01.jpg',
+    '/images/news/ramadan02.jpg',
+    '/images/news/ramadan03.jpg',
+    '/images/news/ramadan04.jpg',
+    '/images/news/ramadan05.jpg',   
+    '/images/news/ramadhan06.jpg',
+    '/images/news/ramadhan07.jpg',
+    '/images/news/ramadhan08.jpg',
+    '/images/news/ramadhan09.jpg', 
+    '/images/news/ramadhan10.jpg',
+  ]
+},
+
+    {
+  id: 5,
+  date: 'March 27, 2026',
+  category: 'Event',
+  title: 'Launch of the Training Path through Palm Fiber Workshop',
+  excerpt: 'The training program of From & To People was launched through a hands-on palm fiber (saaf) workshop.',
+  content: 'The training path of the “From & To People” program was launched on Friday, March 27 through a palm fiber (saaf) workshop.\n\nThe session included an intervention by Ms. Achwak Bechraoui, representative of the Craft Training Center “Hub Design” and a member of the project’s scientific community. She spoke about the characteristics of this material and its importance within the artisanal ecosystem in southern Tunisia, particularly in Gabès, emphasizing the need to valorize it through a conscious and purposeful craft approach.\n\nThis opening also created an interactive space for participants to ask questions, share opinions, and exchange experiences.\n\nThe activity marked an essential step that enabled participants to learn techniques for sorting different types of palm fibers and how to work with the material, helping them develop an initial sensitivity to it. This was further reinforced through practical exercises and group discussions that laid the foundation for a learning and experimentation-based process.',
+  gallery: [
+    '/images/news/saaf1.jpeg',
+    '/images/news/saaf02.jpg',
+    '/images/news/saaf03.jpg',
+    '/images/news/saaf04.jpg',
+    '/images/news/saaf05.jpg'
+  ]
+}
   ],
   ar: [
     {
@@ -115,6 +152,41 @@ gallery: [
         '/images/news/opencall2.jpeg',
       ]
     },
+    {
+  id: 4,
+  date: 'مارس 2026',
+  category: 'حدث',
+  title: 'لقاء متابعة مع المشاركين خلال شهر رمضان',
+  excerpt: 'جلسة متابعة لمسار برنامج من وإلى الناس وتقدّم مراحله، مع العمل على صياغة الميثاق الداخلي.',
+  content: 'خلال شهر رمضان، كان لنا لقاء مع مشاركي/ات برنامج “من وإلى الناس” في مقرّ منظمة الراقصون المواطنون الجنوب بقابس.\n\nوخصّص هذا اللقاء لمتابعة تقدّم المسار منذ اللقاء الافتتاحي في شهر جانفي والزيارات الميدانية المنجزة في شهر فيفري، والاستعداد لمرحلة التكوين والتدريب القادمة.\n\nكما تمّ تخصيص جزء من الجلسة لصياغة الميثاق الداخلي للبرنامج ضمن مسار تشاركي جمع بين المشاركين/ات، بما يساهم في بناء إطار عمل جماعي قائم على القيم المشتركة والتعاون.',
+  gallery: [
+    '/images/news/ramadan01.jpg',
+    '/images/news/ramadan02.jpg',
+    '/images/news/ramadan03.jpg',
+    '/images/news/ramadan04.jpg',
+    '/images/news/ramadan05.jpg',   
+    '/images/news/ramadhan06.jpg',
+    '/images/news/ramadhan07.jpg',
+    '/images/news/ramadhan08.jpg',
+    '/images/news/ramadhan09.jpg', 
+    '/images/news/ramadhan10.jpg',
+  ]
+},
+    {
+  id: 5,
+  date: '27 مارس 2026',
+  category: 'حدث',
+  title: 'افتتاح المسار التكويني من خلال رغّاطة السعف',
+  excerpt: 'انطلاق المسار التكويني لبرنامج من وإلى الناس عبر ورشة تطبيقية حول السعف.',
+  content: 'تمّ افتتاح المسار التكويني لبرنامج «من وإلى الناس» من خلال رغّاطة السعف، وذلك يوم الجمعة 27 مارس.\n\nوقد تضمّن النشاط مداخلة للسيدة أشواق بشراوي، ممثّلة مركز التكوين في الصناعات الحرفية «Hub Design» وعضو من المجتمع العلمي للمشروع، حيث تحدثت عن خصائص هذه المادة وأهميتها ضمن المنظومة الحِرفية في الجنوب التونسي، وخاصة في قابس، مؤكّدة على ضرورة تثمينها في إطار مقاربة حرفية واعية وهادفة.\n\nكما مثّل هذا الافتتاح فضاءً تفاعليًا لطرح التساؤلات، وإبداء الآراء، وتبادل الخبرات بين المشاركين.\n\nوشكّل النشاط خطوة أساسية مكّنت المشاركين من تعلّم تقنيات فرز أنواع السعف وكيفية التعامل مع المادة، مما ساهم في تنمية حسّ أولي بها. وقد تعزّز ذلك من خلال تمارين تطبيقية ونقاشات جماعية، وضعت حجر الأساس لمسار قائم على التعلّم والتجريب.',
+  gallery: [
+    '/images/news/saaf1.jpeg',
+    '/images/news/saaf02.jpg',
+    '/images/news/saaf03.jpg',
+    '/images/news/saaf04.jpg',
+    '/images/news/saaf05.jpg'
+  ]
+}
   ],
 }
 
