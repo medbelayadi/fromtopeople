@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { Check, Lightbulb, Leaf, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
@@ -7,63 +8,85 @@ interface ProgramAboutPageProps {
   language: 'en' | 'ar'
 }
 
-// Bootcamps/Modules data from Program page
-const bootcamps = {
+// Workshops data
+const workshops = {
   en: [
     {
-      title: 'Module 1: Material & Ecology',
-      months: 'Months 1-3',
-      description:
-        'Explore the relationship between materials, waste, and sustainability. Engage with hands-on workshops on ecological design, material sourcing, and zero-waste practices.',
-      highlights: ['Material Research', 'Waste Valorization', 'Ecological Design', 'Lab Experiments'],
+      title: 'Saaf Workshop',
+      months: 'From March 27 to April 19',
+      description: 'Discover palm leaf material extracted from palm trees, essential to Tunisian oasis craft heritage. Learn preparation stages from cleaning and drying to softening, then traditional braiding and weaving techniques. Create handcrafted baskets or decorative items, experimenting with innovative forms while highlighting Saaf as a natural, sustainable material and recontextualizing traditional crafts in contemporary design.',
+      image: '/images/workshops/saaf.jpg',
+      highlights: ['Palm Leaf Preparation', 'Traditional Braiding Techniques', 'Sustainable Material Innovation', 'Contemporary Craft Forms'],
     },
     {
-      title: 'Module 2: Contemporary Arts Practice',
-      months: 'Months 3-5',
-      description:
-        'Develop artistic skills through various mediums and methodologies. Learn from invited artists and engage with contemporary art theory and criticism.',
-      highlights: ['Studio Practice', 'Artist Mentorship', 'Art Theory', 'Public Engagement'],
+      title: 'Smar Workshop',
+      months: 'From 1 May to 30 June',
+      description: 'Explore Smar natural plant fiber from southern Tunisia\'s wetlands, rich in heritage value and contemporary creative potential. Learn collection, drying, preparation, weaving, and shaping techniques. Create unique pieces experimenting with forms and designs, understanding Smar as a sustainable local material and recontextualizing traditional craft knowledge in modern design approaches.',
+      image: '/images/workshops/smar.jpg',
+      highlights: ['Fiber Collection & Preparation', 'Weaving & Shaping Techniques', 'Sustainable Local Materials', 'Modern Craft Innovation'],
     },
     {
-      title: 'Module 3: Craft & Knowledge',
-      months: 'Months 5-8',
-      description:
-        'Discover traditional craftsmanship and its contemporary applications. Work with master artisans and learn heritage techniques rooted in South Tunisia.',
-      highlights: ['Craft Mastery', 'Traditional Knowledge', 'Mentorship', 'Community Exchange'],
+      title: 'Fibres Vegetales',
+      months: 'From 12 to 21 June',
+      description: 'Comprehensive exploration of plant fibers from local ecosystems. Master identification, extraction, treatment, and transformation techniques for sustainable textile and material applications in contemporary craft.',
+      image: '/images/workshops/fibres.jpg',
+      highlights: ['Plant Fiber Extraction', 'Treatment Processes', 'Textile Transformation', 'Sustainable Applications'],
     },
     {
-      title: 'Module 4: Public Presentation & Legacy',
-      months: 'Months 8-10',
-      description:
-        'Share your work and insights with the broader community. Organize exhibitions, workshops, and public events that showcase the program outcomes.',
-      highlights: ['Exhibition Planning', 'Public Symposium', 'Documentation', 'Future Pathways'],
+      title: 'Wool Felting Workshop',
+      months: 'From 3 to 26 July',
+      description: 'Discover the traditional technique of wool felting, transforming natural wool into a cohesive material through pressure, moisture, and movement. Learn the stages of the process, from preparing the fibers to mastering basic felting techniques, while understanding the properties of wool and its shaping potential. Create unique artistic or functional pieces through hands-on practice, exploring innovative forms and designs. Highlight the value of this traditional craft and its relevance in contemporary sustainable design approaches.',
+      image: '/images/workshops/felting.jpg',
+      highlights: ['Fiber Preparation', 'Basic Felting Techniques', 'Sustainable Material Innovation', 'Contemporary Craft Forms'],
     },
+    {
+      title: 'Molding & Modeling Workshop',
+      months: 'From 7 to 30 August',
+      description: 'Hands-on workshop exploring molding and modeling techniques with natural materials. Learn form creation, casting methods, and surface finishing rooted in traditional practices adapted for contemporary ecological design.',
+      image: '/images/workshops/moulage.jpg',
+      highlights: ['Molding Techniques', 'Natural Material Casting', 'Surface Finishing', 'Ecological Form Design'],
+    },
+
   ],
   ar: [
     {
-      title: 'الوحدة 1: المادة والإيكولوجيا',
-      months: 'الأشهر 1-3',
-      description: 'استكشف العلاقة بين المواد والنفايات والاستدامة. شارك في ورش عملية حول التصميم الإيكولوجي ومصادر المواد والممارسات الخالية من النفايات.',
-      highlights: ['بحث المواد', 'تثمين النفايات', 'التصميم الإيكولوجي', 'تجارب المختبر'],
+      title: 'ورشة السعف',
+      months: ' من 27 مارس الى 19 افريل',
+      description: 'تُعدّ ورشة السَّعف فضاءً لاكتشاف هذه المادة النباتية المستخرجة من أوراق النخيل، والتي تُشكّل جزءًا أساسيًا من التراث الحرفي في تونس، خاصة في المناطق الواحية. يتعرّف المشاركون خلال الورشة على مراحل تحضير السعف، من تنظيفه وتجفيفه إلى تليينه، ثم يتعلمون تقنيات التضفير والنسج التقليدية. ومن خلال التطبيق العملي، يُنجز المشاركون قطعًا يدوية مثل السلال أو العناصر الزخرفية، مع فسح المجال للتجريب والابتكار في الأشكال. كما تسلّط الورشة الضوء على أهمية السعف كمادة طبيعية ومستدامة، وتدعو إلى إعادة توظيف الحرف التقليدية ضمن مقاربات تصميمية معاصرة.',
+      image: '/images/bootcamps/smar-workshop.jpeg',
+      highlights: ['تحضير أوراق النخيل', 'تقنيات التضفير التقليدية', 'الابتكار بالمواد المستدامة', 'الأشكال الحرفية المعاصرة'],
     },
     {
-      title: 'الوحدة 2: الممارسة الفنية المعاصرة',
-      months: 'الأشهر 3-5',
-      description: 'طور مهاراتك الفنية من خلال وسائط ومنهجيات مختلفة. تعلم من الفنانين المدعوين واشتغل بنظرية الفن المعاصر والنقد.',
-      highlights: ['الممارسة الاستوديو', 'توجيه الفنانين', 'نظرية الفن', 'المشاركة العامة'],
+      title: 'ورشة السّمار',
+      months: 'من 1 ماي إلى 30 جوان',
+      description: 'تُعدّ ورشة السَّمّار فضاءً لاكتشاف هذا الليف النباتي الطبيعي المستخرج من المناطق الرطبة في الجنوب التونسي، بوصفه مادةً تحمل قيمة تراثية وإمكانات إبداعية معاصرة. يتعرّف المشاركون خلال الورشة على مختلف مراحل العمل، من جمع الألياف وتجفيفها وتحضيرها، إلى تقنيات النسج والتشكيل الأساسية. ومن خلال التطبيق العملي، يُتاح لهم ابتكار قطعهم الخاصة والتجريب في الأشكال والتصاميم، مع فهم أعمق لأهمية السَّمّار كخامة مستدامة مرتبطة بالبيئة المحلية. كما تفتح الورشة مجالًا للتفكير في سبل إعادة توظيف المعارف الحرفية التقليدية ضمن مقاربات تصميمية حديثة.',
+      image: '/images/bootcamps/saaf-workshop.jpeg',
+      highlights: ['جمع وتحضير الألياف', 'تقنيات النسج والتشكيل', 'المواد المحلية المستدامة', 'التصاميم الحرفية المعاصرة'],
     },
-    {
-      title: 'الوحدة 3: الحرفة والمعرفة',
-      months: 'الأشهر 5-8',
-      description: 'اكتشف الحرفية التقليدية وتطبيقاتها المعاصرة. اعمل مع الحرفيين الرئيسيين وتعلم التقنيات التراثية المتجذرة في جنوب تونس.',
-      highlights: ['إتقان الحرفة', 'المعرفة التقليدية', 'التوجيه', 'تبادل المجتمع'],
+        {
+      title: 'الألياف النباتية',
+      months: 'من 12 الى21 جوان',
+      description: 'استكشاف شامل للألياف النباتية من النظم البيئية المحلية. إتقان تحديد واستخلاص ومعالجة وتحويل التقنيات لتطبيقات مستدامة في النسيج والمواد الحرفية المعاصرة.',
+      image: '/images/bootcamps/fibres-workshop.jpg',
+      highlights: ['استخلاص الألياف النباتية', 'عمليات المعالجة', 'تحويل النسيج', 'التطبيقات المستدامة'],
     },
-    {
-      title: 'الوحدة 4: العرض العام والإرث',
-      months: 'الأشهر 8-10',
-      description: 'شارك عملك ورؤيتك مع المجتمع الأوسع. نظم معارض وورش عمل وفعاليات عامة تعرض نتائج البرنامج.',
-      highlights: ['تخطيط المعرض', 'الندوة العامة', 'التوثيق', 'المسارات المستقبلية'],
+
+        {
+      title: 'ورشة التلبيد بالصوف',
+      months: 'من 3 إلى 26 جويلية',
+      description: 'تُعدّ ورشة التلبيد  فضاءً لاكتشاف هذه التقنية التقليدية التي تعتمد على تحويل الصوف الطبيعي إلى مادة متماسكة عبر الضغط والرطوبة والحركة، وذلك بمرافقة حرفي من الكاف. يتعرّف المشاركون خلال الورشة على مراحل العمل، من تحضير الألياف إلى تقنيات التلبيد الأساسية، مع فهم خصائص الصوف وإمكانياته التشكيلية. ومن خلال التطبيق العملي، يُنجز المشاركون قطعًا فنية أو وظيفية، مع فسح المجال للتجريب في الأشكال والتصاميم. كما تسلّط الورشة الضوء على قيمة هذه الحرفة التقليدية وتدعو إلى إعادة توظيفها ضمن مقاربات تصميمية معاصرة ومستدامة.',
+      image: '/images/bootcamps/felting-workshop.jpeg',
+      highlights: ['تحضير الألياف الطبيعية', 'تقنيات التلبيد التقليدية', 'التشكيل الفني والوظيفي', 'إعادة توظيف الحرف المستدامة'],
     },
+        {
+      title: 'ورشة القوالب والنحت',
+      months: 'من 7 إلى 30 اوت',
+      description: 'ورشة عملية حول تقنيات القوالب والنحت بمواد طبيعية. تعلم إنشاء الأشكال، طرق الصب، وتشطيب السطح متجذّرة في الممارسات التقليدية المُكيّفة للتصميم الإيكولوجي المعاصر.',
+      image: '/images/bootcamps/moulage-workshop.jpeg',
+      highlights: ['تقنيات القوالب', 'صب المواد الطبيعية', 'تشطيب السطح', 'تصميم الأشكال الإيكولوجية'],
+    },
+
+
   ],
 }
 
@@ -71,7 +94,7 @@ const bootcamps = {
 const labels = {
   en: {
     programTitle: 'Program Structure',
-    programSubtitle: 'A 10-month intensive journey through four transformative modules',
+    programSubtitle: 'A 18-month intensive journey through four transformative modules',
     overview: 'Program Overview',
     details: 'Key Details',
     duration: 'Duration',
@@ -79,7 +102,7 @@ const labels = {
     location: 'Location',
     investment: 'Investment',
     hours: '120+ contact hours',
-    count: '25+ participants per cohort',
+    count: '30+ participants ',
     tunisia: 'South Tunisia',
     price: 'Subsidized for emerging artists',
     readyToApply: 'Ready to Apply?',
@@ -89,7 +112,7 @@ const labels = {
   },
   ar: {
     programTitle: 'هيكل البرنامج',
-    programSubtitle: 'رحلة مكثفة لمدة 10 أشهر من خلال أربع وحدات تحويلية',
+    programSubtitle: 'رحلة مكثفة لمدة 18 شهر من خلال أربع وحدات تحويلية',
     overview: 'نظرة عامة على البرنامج',
     details: 'التفاصيل الرئيسية',
     duration: 'المدة',
@@ -97,7 +120,7 @@ const labels = {
     location: 'الموقع',
     investment: 'الاستثمار',
     hours: '+120 ساعة تلامس',
-    count: '+25 مشارك لكل فوج',
+    count: '+30 مشارك ',
     tunisia: 'جنوب تونس',
     price: 'مدعوم للفنانين الناشئين',
     readyToApply: 'هل أنت مستعد للتقديم؟',
@@ -179,8 +202,88 @@ const pillars = {
   ],
 }
 
+// New Timeline Data based on "Feuille de calcul sans titre.xlsx"
+const timelineStations = {
+  en: [
+    {
+      phase: 'Phase 1',
+      title: 'Material Study & Hand-Crafting',
+      period: 'Months 1 - 6',
+      details: 'Intensive workshops on Saaf, Smar, Paper, Wool Felting, and Molding.',
+      
+    },
+    {
+      phase: 'Phase 2',
+      title: 'Experimentation & Design',
+      period: 'Months 7 - 8',
+      details: 'Creative exploration, prototyping, and refining contemporary forms.',
+      
+    },
+    {
+      phase: 'Phase 3',
+      title: 'Professional Production',
+      period: 'Months 9 - 11',
+      details: 'Finalizing designs and entering the production cycle for collections.',
+      
+    },
+    {
+      phase: 'Phase 4',
+      title: 'Support & Incubation',
+      period: 'Months 12 - 15',
+      details: 'Technical support, financial modeling, and legal setup for artisans.',
+      
+    },
+    {
+      phase: 'Phase 5',
+      title: 'Exhibition & Market',
+      period: 'Months 16 - 18',
+      details: 'Marketing products and major exhibitions in Djerba and Tunis.',
+      
+    }
+  ],
+  ar: [
+    {
+      phase: 'المرحلة 1',
+      title: 'دراسة المواد والحرف اليدوية',
+      period: 'الأشهر 1 - 6',
+      details: 'ورش عمل مكثفة حول السعف، السمار، الورق، تلبيد الصوف، والقوالب.',
+      
+    },
+    {
+      phase: 'المرحلة 2',
+      title: 'التجريب والتصميم',
+      period: 'الأشهر 7 - 8',
+      details: 'الاستكشاف الإبداعي، صنع النماذج الأولية، وتطوير الأشكال المعاصرة.',
+      
+    },
+    {
+      phase: 'المرحلة 3',
+      title: 'الإنتاج المهني',
+      period: 'الأشهر 9 - 11',
+      details: 'الانتهاء من التصاميم وبدء دورة الإنتاج للمجموعات الفنية.',
+      
+    },
+    {
+      phase: 'المرحلة 4',
+      title: 'الدعم والمرافقة',
+      period: 'الأشهر 12 - 15',
+      details: 'الدعم الفني، النمذجة المالية، والإجراءات القانونية للحرفيين.',
+      
+    },
+    {
+      phase: 'المرحلة 5',
+      title: 'المعارض والتسويق',
+      period: 'الأشهر 16 - 18',
+      details: 'تسويق المنتجات وتنظيم معارض كبرى في جربة وتونس العاصمة.',
+      
+    }
+  ]
+}
+
+
+
 export function ProgramAboutPage({ language }: ProgramAboutPageProps) {
-  const modules = language === 'en' ? bootcamps.en : bootcamps.ar
+  const modules = language === 'en' ? workshops.en : workshops.ar
   const text = language === 'en' ? labels.en : labels.ar
   const about = language === 'en' ? aboutContent.en : aboutContent.ar
   const pillarData = language === 'en' ? pillars.en : pillars.ar
@@ -283,9 +386,15 @@ export function ProgramAboutPage({ language }: ProgramAboutPageProps) {
             { label: text.location, value: text.tunisia },
             { label: text.investment, value: text.price },
           ].map((item, i) => (
-            <div key={i} className="bg-secondary p-6 rounded-lg border border-border text-center">
-              <p className="text-sm text-foreground/60 font-semibold uppercase tracking-wide mb-2">{item.label}</p>
-              <p className="text-2xl font-bold text-primary">{item.value}</p>
+            <div key={i} className="group relative bg-gradient-to-b from-white via-white/80 to-secondary/30 border border-border/50 rounded-2xl p-6 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 backdrop-blur-sm hover:backdrop-blur-md h-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/2 via-transparent to-primary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              <p className="text-xs md:text-sm text-foreground/70 font-semibold uppercase tracking-widest mb-3 relative z-10 group-hover:text-primary/90 transition-colors">
+                {item.label}
+              </p>
+              <p className="text-xl md:text-2xl lg:text-3xl font-black bg-gradient-to-r from-primary via-primary/80 to-foreground bg-clip-text text-transparent relative z-10 leading-tight">
+                {item.value}
+              </p>
+              <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-transparent rounded-3xl -skew-x-3 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm" />
             </div>
           ))}
         </div>
@@ -294,41 +403,52 @@ export function ProgramAboutPage({ language }: ProgramAboutPageProps) {
 {/* Modules - 2x2 Grid */}
 <div className="container mx-auto px-4">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-    {modules.slice(0, 4).map((module, i) => (
+    {modules.slice(0, 5).map((module, i) => (
       <div key={i} className="group relative">
         
         <div className="absolute -inset-4 bg-gradient-to-r from-primary/5 via-primary/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
 
-        <div className="relative bg-white border border-border rounded-lg overflow-hidden h-full">
+        <div className="relative bg-white border border-border rounded-lg overflow-hidden h-full group/image">
+          <div className="h-64 md:h-72 lg:h-80 relative overflow-hidden">
+            <Image
+              src={module.image}
+              alt={module.title}
+              fill
+              className="object-cover object-center group-hover/image:scale-110 transition-transform duration-700"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/0 opacity-0 group-hover/image:opacity-100 transition-opacity" />
+          </div>
           <div className="h-1 bg-gradient-to-r from-primary via-primary/60 to-transparent" />
 
           <div className="p-8 md:p-10">
             <div className="flex items-start gap-6">
 
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-16 h-16 bg-primary rounded-lg text-white text-2xl font-bold">
+              <div className="flex-shrink-0 pt-2">
+                <div className="flex items-center justify-center w-14 h-14 bg-primary rounded-lg text-white text-xl font-bold shadow-lg">
                   {i + 1}
                 </div>
               </div>
 
               <div className={`flex-1 ${language === 'ar' ? 'text-right' : ''}`}>
-                <p className="text-sm font-semibold text-primary/70 uppercase tracking-wider mb-2">
+                <p className="text-sm font-semibold text-primary/80 uppercase tracking-wider mb-2 bg-primary/5 px-3 py-1 rounded-full inline-block w-fit">
                   {module.months}
                 </p>
 
-                <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
                   {module.title}
                 </h3>
 
-                <p className="text-foreground/70 leading-relaxed mb-6">
+                <p className="text-foreground/75 leading-relaxed mb-6 line-clamp-3 text-sm md:text-base">
                   {module.description}
                 </p>
 
-                <div className="grid grid-cols-2 gap-3">
-                  {module.highlights.map((highlight, j) => (
-                    <div key={j} className="flex items-center gap-2">
-                      <Check size={18} className="text-primary flex-shrink-0" />
-                      <span className="text-sm text-foreground/80">
+                <div className="grid grid-cols-2 gap-3 mb-4">
+                  {module.highlights.slice(0,4).map((highlight, j) => (
+                    <div key={j} className="flex items-center gap-3 p-2 bg-muted/50 hover:bg-primary/5 rounded-lg transition-colors group/highlight">
+                      <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
+                      <span className="text-xs font-medium text-foreground/80 group-hover/highlight:text-primary transition-colors">
                         {highlight}
                       </span>
                     </div>
@@ -345,27 +465,48 @@ export function ProgramAboutPage({ language }: ProgramAboutPageProps) {
   </div>
 </div>
 
-      {/* Timeline Visualization */}
-      <div className="container mx-auto px-4 mt-20">
-        <div className={`max-w-4xl mx-auto ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-12">
-            {text.journeyTitle}
-          </h2>
-          <div className="relative">
-            <div className="absolute top-8 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary/50 to-primary/20" />
-            <div className="grid grid-cols-4 gap-4 relative z-10">
-              {['Month 1-3', 'Month 3-5', 'Month 5-8', 'Month 8-10'].map((period, i) => (
-                <div key={i} className="flex flex-col items-center">
-                  <div className="w-6 h-6 bg-primary rounded-full border-4 border-white shadow-md mb-4" />
-                  <p className="text-sm font-semibold text-foreground">{period}</p>
+      {/* Full Detailed Timeline Visualization */}
+  <div className="container mx-auto px-4 mt-32 mb-20">
+    <div className={`max-w-5xl mx-auto ${language === 'ar' ? 'text-right' : 'text-center'}`}>
+      <h2 className="text-3xl md:text-4xl font-bold text-primary mb-16">
+        {text.journeyTitle}
+      </h2>
+      
+      <div className="relative">
+        {/* Background Line */}
+        <div className="absolute top-0 left-8 md:left-1/2 md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary/10 via-primary to-primary/10 hidden md:block" />
+        
+        <div className="space-y-12">
+          {(language === 'en' ? timelineStations.en : timelineStations.ar).map((station, i) => (
+            <div key={i} className={`relative flex flex-col md:flex-row items-center ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+              {/* Desktop Connector Dot */}
+              <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-lg z-10 hidden md:block" />
+              
+              {/* Content Card */}
+              <div className="w-full md:w-[45%] group">
+                <div className="bg-white p-6 rounded-2xl border border-border shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1">
+                  <div className="flex items-center gap-4 mb-3">
+                    
+                    <div>
+                      <p className="text-xs font-bold text-primary uppercase tracking-tighter">{station.phase}</p>
+                      <p className="text-sm text-foreground/50">{station.period}</p>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">{station.title}</h3>
+                  <p className="text-foreground/70 text-sm leading-relaxed">{station.details}</p>
                 </div>
-              ))}
+              </div>
+              
+              {/* Spacer for Desktop */}
+              <div className="md:w-[10%]" />
             </div>
-          </div>
+          ))}
         </div>
       </div>
-
+    </div>
+  </div>
 
     </section>
   )
 }
+

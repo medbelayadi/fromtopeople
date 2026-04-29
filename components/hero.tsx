@@ -137,7 +137,7 @@ export function Hero({ language }: HeroProps) {
               </div>
               <div>
                 <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-                  <AnimatedNumber end={30} duration={3500} suffix="+" />
+                  <AnimatedNumber end={30} duration={1500} suffix="+" />
                 </div>
                 <p className="text-base md:text-lg text-white/70 mt-1">
                   {language === 'ar' ? 'مشارك' : 'Participants'}
@@ -145,10 +145,10 @@ export function Hero({ language }: HeroProps) {
               </div>
               <div>
                 <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-                  <AnimatedNumber end={4} duration={2500} />
+                  <AnimatedNumber end={6} duration={1500} suffix="+"/>
                 </div>
                 <p className="text-base md:text-lg text-white/70 mt-1">
-                  {language === 'ar' ? 'إقامات الفنية' : 'Artistic Residencies'}
+                  {language === 'ar' ? 'ورشات تكوينية' : 'Workshops'}
                 </p>
               </div>
             </div>

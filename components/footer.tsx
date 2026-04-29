@@ -168,7 +168,7 @@ export function Footer({ language }: FooterProps) {
         {/* Logos Sections */}
         <div className="w-full mt-24 mb-6">
           <div className={`flex flex-col items-center md:flex-row md:items-center md:justify-center lg:justify-between lg:items-end gap-4 md:gap-8 lg:gap-6 ${language === 'ar' ? 'lg:flex-row-reverse' : ''}`}>
-            <div className="flex-shrink-0 mb-8 md:mb-0">
+            <div className="hidden md:block flex-shrink-0 mb-8 md:mb-0">
               <Image
                 src="/LOGOpng.png"
                 alt="Main logo"
@@ -179,14 +179,14 @@ export function Footer({ language }: FooterProps) {
             </div>
             <div className="flex items-center gap-4 md:gap-6 lg:gap-12">
               <Image
-                src="/logodcs4.png"
+                src="/logodcs1.png"
                 alt="Partner logo DCS"
                 width={140}
                 height={70}
                 className="h-14 md:h-18 lg:h-24 w-auto drop-shadow-xl opacity-95 hover:opacity-100 transition-all duration-300"
               />
               <Image
-                src="/logodrosos4.png"
+                src="/logodrosos1.png"
                 alt="Partner logo 2"
                 width={140}
                 height={70}

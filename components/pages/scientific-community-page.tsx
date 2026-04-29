@@ -79,12 +79,12 @@ export function ScientificCommunityPage({ language }: ScientificCommunityPagePro
   return (
     <div className={`min-h-screen pt-32 ${language === 'ar' ? 'font-arabic text-right' : ''}`}>
       {/* Page Intro */}
-      <section className="w-screen py-24 bg-gradient-to-br from-slate-50 via-white to-primary/5 -mt-24">
+      <section className="w-screen py-20 bg-gradient-to-br from-slate-50 via-white to-primary/5 -mt-24">
         <div className="w-full px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-32 max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-gray-900 via-foreground to-primary bg-clip-text text-transparent mb-16 leading-[0.9] -tracking-[0.02em] pb-8 drop-shadow-2xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-gray-900 via-foreground to-primary bg-clip-text text-transparent mb-12 leading-[0.9] -tracking-[0.02em] pb-8 drop-shadow-2xl">
             {title}
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl text-foreground/90 max-w-4xl leading-relaxed mt-12">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-foreground/90 max-w-4xl leading-relaxed mt-8">
             {introText}
           </p>
         </div>
@@ -99,35 +99,35 @@ export function ScientificCommunityPage({ language }: ScientificCommunityPagePro
 
         return (
           <div key={index} className="w-screen py-20 bg-gradient-to-b even:from-slate-50 even:to-white odd:bg-white/70">
-            <div className="w-full grid grid-cols-1 lg:grid-cols-[1fr_2fr] min-h-[60vh] md:min-h-[70vh] lg:h-[70vh] max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-32">
+            <div className="w-full grid grid-cols-1 lg:grid-cols-[1fr_2fr] min-h-[50vh] lg:min-h-[70vh] max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-32 gap-8 lg:gap-0">
               {/* Image Column */}
-              <div className="relative overflow-hidden aspect-[4/5] max-h-[500px] mx-auto">
+              <div className="relative overflow-hidden w-full max-w-sm mx-auto lg:mx-0 aspect-[3/4] md:aspect-[4/5] max-h-[450px] rounded-2xl">
                 <Image
                   src={expert.mainImage}
                   alt={name}
                   fill
-                  className="object-cover object-top hover:scale-105 transition-transform duration-1000 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-top lg:hover:scale-105 transition-transform duration-700 lg:group-hover:scale-110 rounded-2xl"
+                  sizes="(max-width: 768px) 90vw, 40vw"
                   priority={index < 2}
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/5 lg:group-hover:from-black/20 lg:group-hover:to-black/20 transition-all duration-700 shadow-lg" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/10 lg:group-hover:from-black/20 lg:group-hover:to-black/20 transition-all duration-700 rounded-2xl" />
               </div>
 
               {/* Content Column */}
-              <div className="relative overflow-hidden aspect-[4/5] max-h-[500px] mx-auto">
-                <Badge className="mb-4 px-4 py-1.5 text-sm bg-gradient-to-r from-primary to-secondary w-fit uppercase tracking-wider font-semibold">
+              <div className="flex flex-col justify-center px-6 sm:px-8 py-8 lg:py-12 text-center lg:text-left max-w-xl mx-auto lg:mx-0">
+                <Badge className="mb-6 px-6 py-2 text-sm bg-gradient-to-r from-primary to-secondary w-fit uppercase tracking-wider font-semibold mx-auto lg:mx-0">
                   {expertise}
                 </Badge>
                 
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight text-foreground">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight text-foreground">
                   {name}
                 </h2>
                 
-                <p className="text-base md:text-base lg:text-base leading-relaxed mb-8 max-w-4xl text-foreground/80">
+                <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0 text-foreground/80 px-4 lg:px-0">
                   {bio}
                 </p>
                 
-                <Button className="w-fit px-8 py-6 text-base bg-primary text-primary-foreground border-2 border-primary/50 hover:bg-primary/90 hover:border-primary shadow-lg hover:shadow-primary/25 transition-all duration-300 font-semibold uppercase tracking-wide">
+                <Button className="w-fit px-8 py-4 text-base mx-auto lg:mx-0 bg-primary text-primary-foreground border-2 border-primary/50 hover:bg-primary/90 hover:border-primary shadow-lg hover:shadow-primary/25 transition-all duration-300 font-semibold uppercase tracking-wide">
                   {translations.viewCV}
                 </Button>
               </div>
@@ -135,19 +135,19 @@ export function ScientificCommunityPage({ language }: ScientificCommunityPagePro
 
             {/* Per-expert Workshops Gallery */}
             <section className="w-screen py-8 bg-gradient-to-r from-muted/50 to-primary/10 mt-2 lg:mt-4">
-              <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 max-w-7xl mx-auto">
+              <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto">
                 {expert.workshopImages.map((imgSrc, imgIndex) => (
                   <div 
                     key={imgIndex}
-                    className="group relative aspect-[3/2] rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-500 cursor-pointer"
+                    className="group relative aspect-[4/3] sm:aspect-[3/2] rounded-2xl overflow-hidden shadow-xl lg:hover:shadow-2xl lg:hover:-translate-y-2 transition-all duration-500 cursor-pointer"
                   >
                     <Image
                       src={imgSrc}
                       alt={`${name} workshop`}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="object-cover object-center lg:group-hover:scale-110 transition-transform duration-500 rounded-2xl"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-400" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 opacity-0 lg:group-hover:opacity-100 transition-all duration-400 rounded-2xl" />
                   </div>
                 ))}
               </div>

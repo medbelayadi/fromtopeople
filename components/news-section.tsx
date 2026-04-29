@@ -4,6 +4,12 @@ interface NewsSectionProps {
 
 const news = {
   en: [
+            {
+         date: 'March 2026',
+         title: 'Launch of the Training Path through Palm Fiber Workshop',
+         excerpt: 'The training program of From & To People was launched through a hands-on palm fiber (saaf) workshop.',
+         image: '/images/news/saaf1.jpeg',
+    },
         {
         date: 'March 2026',
         title: 'Follow-up Meeting with Participants during Ramadan',
@@ -11,12 +17,7 @@ const news = {
         image: '/images/news/ramadan03.jpg',
     },
 
-        {
-         date: 'March 2026',
-         title: 'Launch of the Training Path through Palm Fiber Workshop',
-         excerpt: 'The training program of From & To People was launched through a hands-on palm fiber (saaf) workshop.',
-         image: '/images/news/saaf1.jpeg',
-    },
+
 
 
     {
@@ -28,18 +29,18 @@ const news = {
 
   ],
   ar: [
-        {
-      date: 'مارس 2026',
-      title: 'لقاء متابعة مع المشاركين خلال شهر رمضان',
-      excerpt: 'جلسة متابعة لمسار برنامج من وإلى الناس وتقدّم مراحله، مع العمل على صياغة الميثاق الداخلي.',
-      image: '/images/news/ramadan03.jpg',
-    },
 
         {
       date: 'مارس 2026',
       title: 'افتتاح المسار التكويني من خلال رغّاطة السعف',
       excerpt: 'انطلاق المسار التكويني لبرنامج من وإلى الناس عبر ورشة تطبيقية حول السعف.',
       image: '/images/news/saaf1.jpeg',
+    },
+        {
+      date: 'مارس 2026',
+      title: 'لقاء متابعة مع المشاركين خلال شهر رمضان',
+      excerpt: 'جلسة متابعة لمسار برنامج من وإلى الناس وتقدّم مراحله، مع العمل على صياغة الميثاق الداخلي.',
+      image: '/images/news/ramadan03.jpg',
     },
 
     {
