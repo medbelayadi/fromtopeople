@@ -15,35 +15,35 @@ const workshops = {
       title: 'Saaf Workshop',
       months: 'From March 27 to April 19',
       description: 'Discover palm leaf material extracted from palm trees, essential to Tunisian oasis craft heritage. Learn preparation stages from cleaning and drying to softening, then traditional braiding and weaving techniques. Create handcrafted baskets or decorative items, experimenting with innovative forms while highlighting Saaf as a natural, sustainable material and recontextualizing traditional crafts in contemporary design.',
-      image: '/images/workshops/saaf.jpg',
+image: '/images/bootcamps/saaf-workshop.jpeg',
       highlights: ['Palm Leaf Preparation', 'Traditional Braiding Techniques', 'Sustainable Material Innovation', 'Contemporary Craft Forms'],
     },
     {
       title: 'Smar Workshop',
       months: 'From 1 May to 30 June',
       description: 'Explore Smar natural plant fiber from southern Tunisia\'s wetlands, rich in heritage value and contemporary creative potential. Learn collection, drying, preparation, weaving, and shaping techniques. Create unique pieces experimenting with forms and designs, understanding Smar as a sustainable local material and recontextualizing traditional craft knowledge in modern design approaches.',
-      image: '/images/workshops/smar.jpg',
+image: '/images/bootcamps/smar-workshop.jpeg',
       highlights: ['Fiber Collection & Preparation', 'Weaving & Shaping Techniques', 'Sustainable Local Materials', 'Modern Craft Innovation'],
     },
     {
       title: 'Fibres Vegetales',
       months: 'From 12 to 21 June',
       description: 'Comprehensive exploration of plant fibers from local ecosystems. Master identification, extraction, treatment, and transformation techniques for sustainable textile and material applications in contemporary craft.',
-      image: '/images/workshops/fibres.jpg',
+image: '/images/bootcamps/fibres-workshop.jpg',
       highlights: ['Plant Fiber Extraction', 'Treatment Processes', 'Textile Transformation', 'Sustainable Applications'],
     },
     {
       title: 'Wool Felting Workshop',
       months: 'From 3 to 26 July',
       description: 'Discover the traditional technique of wool felting, transforming natural wool into a cohesive material through pressure, moisture, and movement. Learn the stages of the process, from preparing the fibers to mastering basic felting techniques, while understanding the properties of wool and its shaping potential. Create unique artistic or functional pieces through hands-on practice, exploring innovative forms and designs. Highlight the value of this traditional craft and its relevance in contemporary sustainable design approaches.',
-      image: '/images/workshops/felting.jpg',
+image: '/images/bootcamps/felting-workshop.jpeg',
       highlights: ['Fiber Preparation', 'Basic Felting Techniques', 'Sustainable Material Innovation', 'Contemporary Craft Forms'],
     },
     {
       title: 'Molding & Modeling Workshop',
       months: 'From 7 to 30 August',
       description: 'Hands-on workshop exploring molding and modeling techniques with natural materials. Learn form creation, casting methods, and surface finishing rooted in traditional practices adapted for contemporary ecological design.',
-      image: '/images/workshops/moulage.jpg',
+image: '/images/bootcamps/moulage-workshop.jpeg',
       highlights: ['Molding Techniques', 'Natural Material Casting', 'Surface Finishing', 'Ecological Form Design'],
     },
 
@@ -53,14 +53,14 @@ const workshops = {
       title: 'ورشة السعف',
       months: ' من 27 مارس الى 19 افريل',
       description: 'تُعدّ ورشة السَّعف فضاءً لاكتشاف هذه المادة النباتية المستخرجة من أوراق النخيل، والتي تُشكّل جزءًا أساسيًا من التراث الحرفي في تونس، خاصة في المناطق الواحية. يتعرّف المشاركون خلال الورشة على مراحل تحضير السعف، من تنظيفه وتجفيفه إلى تليينه، ثم يتعلمون تقنيات التضفير والنسج التقليدية. ومن خلال التطبيق العملي، يُنجز المشاركون قطعًا يدوية مثل السلال أو العناصر الزخرفية، مع فسح المجال للتجريب والابتكار في الأشكال. كما تسلّط الورشة الضوء على أهمية السعف كمادة طبيعية ومستدامة، وتدعو إلى إعادة توظيف الحرف التقليدية ضمن مقاربات تصميمية معاصرة.',
-      image: '/images/bootcamps/smar-workshop.jpeg',
+image: '/images/bootcamps/saaf-workshop.jpeg',
       highlights: ['تحضير أوراق النخيل', 'تقنيات التضفير التقليدية', 'الابتكار بالمواد المستدامة', 'الأشكال الحرفية المعاصرة'],
     },
     {
       title: 'ورشة السّمار',
       months: 'من 1 ماي إلى 30 جوان',
       description: 'تُعدّ ورشة السَّمّار فضاءً لاكتشاف هذا الليف النباتي الطبيعي المستخرج من المناطق الرطبة في الجنوب التونسي، بوصفه مادةً تحمل قيمة تراثية وإمكانات إبداعية معاصرة. يتعرّف المشاركون خلال الورشة على مختلف مراحل العمل، من جمع الألياف وتجفيفها وتحضيرها، إلى تقنيات النسج والتشكيل الأساسية. ومن خلال التطبيق العملي، يُتاح لهم ابتكار قطعهم الخاصة والتجريب في الأشكال والتصاميم، مع فهم أعمق لأهمية السَّمّار كخامة مستدامة مرتبطة بالبيئة المحلية. كما تفتح الورشة مجالًا للتفكير في سبل إعادة توظيف المعارف الحرفية التقليدية ضمن مقاربات تصميمية حديثة.',
-      image: '/images/bootcamps/saaf-workshop.jpeg',
+      image: '/images/bootcamps/smar-workshop.jpeg',
       highlights: ['جمع وتحضير الألياف', 'تقنيات النسج والتشكيل', 'المواد المحلية المستدامة', 'التصاميم الحرفية المعاصرة'],
     },
         {
@@ -210,35 +210,35 @@ const timelineStations = {
       title: 'Material Study & Hand-Crafting',
       period: 'Months 1 - 6',
       details: 'Intensive workshops on Saaf, Smar, Paper, Wool Felting, and Molding.',
-      
+      image: 'timeline-training.jpg',
     },
     {
       phase: 'Phase 2',
       title: 'Experimentation & Design',
       period: 'Months 7 - 8',
       details: 'Creative exploration, prototyping, and refining contemporary forms.',
-      
+      image: 'timeline-experimentation.jpg',
     },
     {
       phase: 'Phase 3',
       title: 'Professional Production',
       period: 'Months 9 - 11',
       details: 'Finalizing designs and entering the production cycle for collections.',
-      
+      image: 'timeline-production.jpg',
     },
     {
       phase: 'Phase 4',
       title: 'Support & Incubation',
       period: 'Months 12 - 15',
       details: 'Technical support, financial modeling, and legal setup for artisans.',
-      
+      image: 'timeline-incubation.jpg',
     },
     {
       phase: 'Phase 5',
       title: 'Exhibition & Market',
       period: 'Months 16 - 18',
       details: 'Marketing products and major exhibitions in Djerba and Tunis.',
-      
+      image: 'timeline-exhibition.jpg',
     }
   ],
   ar: [
@@ -247,35 +247,35 @@ const timelineStations = {
       title: 'دراسة المواد والحرف اليدوية',
       period: 'الأشهر 1 - 6',
       details: 'ورش عمل مكثفة حول السعف، السمار، الورق، تلبيد الصوف، والقوالب.',
-      
+      image: 'timeline-training.jpg',
     },
     {
       phase: 'المرحلة 2',
       title: 'التجريب والتصميم',
       period: 'الأشهر 7 - 8',
       details: 'الاستكشاف الإبداعي، صنع النماذج الأولية، وتطوير الأشكال المعاصرة.',
-      
+      image: 'timeline-experimentation.jpg',
     },
     {
       phase: 'المرحلة 3',
       title: 'الإنتاج المهني',
       period: 'الأشهر 9 - 11',
       details: 'الانتهاء من التصاميم وبدء دورة الإنتاج للمجموعات الفنية.',
-      
+      image: 'timeline-production.jpg',
     },
     {
       phase: 'المرحلة 4',
       title: 'الدعم والمرافقة',
       period: 'الأشهر 12 - 15',
       details: 'الدعم الفني، النمذجة المالية، والإجراءات القانونية للحرفيين.',
-      
+      image: 'timeline-incubation.jpg',
     },
     {
       phase: 'المرحلة 5',
-      title: 'المعارض والتسويق',
+      title: 'المعارف والتسويق',
       period: 'الأشهر 16 - 18',
       details: 'تسويق المنتجات وتنظيم معارض كبرى في جربة وتونس العاصمة.',
-      
+      image: 'timeline-exhibition.jpg',
     }
   ]
 }
@@ -288,43 +288,132 @@ export function ProgramAboutPage({ language }: ProgramAboutPageProps) {
   const about = language === 'en' ? aboutContent.en : aboutContent.ar
   const pillarData = language === 'en' ? pillars.en : pillars.ar
 
-  return (
-    <section id="program-about" className={`min-h-screen py-20 bg-white ${language === 'ar' ? 'font-arabic' : ''}`}>
-      {/* Hero Section - Combined About & Program */}
-      <div className="container mx-auto px-4 mb-20">
-        <div className={`max-w-4xl ${language === 'ar' ? 'text-right' : 'text-center'} mx-auto`}>
-          <div className="flex items-center gap-2 mb-4 justify-center">
-            <div className="w-1 h-8 bg-primary" />
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider">{about.aboutLabel}</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 text-balance">
-            {about.aboutTitle}
-          </h1>
-          <p className="text-lg text-foreground/70 leading-relaxed mb-8">{about.aboutSubtitle}</p>
-          <p className="text-lg text-foreground/70 leading-relaxed">{about.visionText}</p>
-        </div>
-      </div>
+return (
+    <div className={`min-h-screen ${language === 'ar' ? 'font-arabic text-right' : ''}`}>
+<section 
+  id="program-about" 
+  className="relative min-h-[100vh] sm:min-h-[95vh] md:min-h-[110vh] overflow-hidden -mt-32"
+>
+  {/* 1. Background Image Layer */}
+  <div className="absolute inset-0 z-0">
+    <div 
+      className="absolute inset-0 w-full h-full"
+      style={{
+        backgroundImage: "url('/images/bootcamps/program-hero.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'left center', // Keep the girl focused on the left
+        backgroundRepeat: 'no-repeat',
+      }}
+    />
+    
+{/* MINIMIZED OVERLAY: Only 15% opacity to keep the image bright */}
+    <div className="absolute inset-0 bg-blue-950/15" />
+    
+    {/* GRADIENT: Darkens ONLY the side where text is positioned for readability */}
+    {/* English: text on RIGHT -> darken right side | Arabic: text on LEFT -> darken left side */}
+    <div className={`absolute inset-0 ${language === 'ar' ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-transparent via-blue-950/20 to-blue-950/60`} />
+  </div>
 
-      {/* Rooted in South Tunisia */}
-      <div className="container mx-auto px-4 mb-20">
-        <div className="max-w-4xl mx-auto">
-          <div className={`${language === 'ar' ? 'text-right' : ''}`}>
-            <h2 className="text-3xl font-bold text-primary mb-8 flex items-center gap-3">
-              <div className="w-1 h-10 bg-primary" />
-              {about.roots}
-            </h2>
-            <p className="text-lg text-foreground/70 leading-relaxed">{about.rootsText}</p>
-          </div>
-        </div>
-      </div>
+  {/* 2. Content Container */}
+  <div className="absolute inset-0 z-10 flex items-end">
+    <div className="container mx-auto px-4 pb-12 md:pb-24 lg:pb-32">
+      
+{/* 
+         THE GRID FIX: 
+         - md:grid-cols-2 creates two equal columns on desktop.
+         - In LTR (English): content on RIGHT to avoid covering girl on LEFT
+         - In RTL (Arabic): content on LEFT so text doesn't overlap the girl
+      */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        {/* 
+           LTR (English): Left side EMPTY (protects the girl), Right side CONTENT
+           RTL (Arabic): Left side CONTENT, Right side EMPTY
+        */}
+        {language === 'ar' ? (
+          <>
+            {/* Left Side: CONTENT (Arabic mode - text on left) */}
+            <div className="flex flex-col items-end text-right">
+              {/* Label with white bar */}
+              <div className="flex items-center gap-2 mb-6 flex-row-reverse">
+                <div className="w-1 h-8 bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)]" />
+                <span className="text-sm font-bold text-white uppercase tracking-widest">
+                  {about.aboutLabel}
+                </span>
+              </div>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-xl">
+                {about.aboutTitle}
+              </h1>
+              
+              <p className="text-lg md:text-xl text-white/95 font-medium leading-relaxed mb-8 drop-shadow-lg">
+                {about.aboutSubtitle}
+              </p>
+              
+              <p className="text-base md:text-lg text-white/80 leading-relaxed drop-shadow-lg">
+                {about.visionText}
+              </p>
+            </div>
 
-      {/* Three Pillars */}
+            {/* Right Side: EMPTY (Protects the image in Arabic) */}
+            <div className="hidden md:block" />
+          </>
+        ) : (
+          <>
+            {/* Left Side: EMPTY (Protects the girl in English) */}
+            <div className="hidden md:block" />
+
+            {/* Right Side: CONTENT (English mode - text on right) */}
+            <div className="flex flex-col items-start text-left">
+              {/* Label with white bar */}
+              <div className="flex items-center gap-2 mb-6">
+                <div className="w-1 h-8 bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)]" />
+                <span className="text-sm font-bold text-white uppercase tracking-widest">
+                  {about.aboutLabel}
+                </span>
+              </div>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-xl">
+                {about.aboutTitle}
+              </h1>
+              
+              <p className="text-lg md:text-xl text-white/95 font-medium leading-relaxed mb-8 drop-shadow-lg">
+                {about.aboutSubtitle}
+              </p>
+              
+              <p className="text-base md:text-lg text-white/80 leading-relaxed drop-shadow-lg">
+                {about.visionText}
+              </p>
+            </div>
+          </>
+)}
+      </div>
+    </div>
+  </div>
+</section>
+
+   
+    <div className="relative z-20 bg-white">
+      
+       <div className="container mx-auto px-4 mb-20 pt-20">
+          <div className="max-w-4xl mx-auto">
+            <div className={`${language === 'ar' ? 'text-right' : ''}`}>
+              <h2 className="text-3xl font-bold text-primary mb-8 flex items-center gap-3">
+                <div className="w-1 h-10 bg-primary" />
+                {about.roots}
+              </h2>
+              <p className="text-lg text-foreground/70 leading-relaxed">{about.rootsText}</p>
+            </div>
+          </div>
+       </div>
+
+      
       <div className="container mx-auto px-4 mb-20">
         <div className={`max-w-4xl mx-auto ${language === 'ar' ? 'text-right' : 'text-center'} mb-16`}>
           <h2 className="text-3xl font-bold text-primary">{about.approach}</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {pillarData.map((pillar, i) => {
             const IconComponent = pillar.icon
             return (
@@ -341,16 +430,17 @@ export function ProgramAboutPage({ language }: ProgramAboutPageProps) {
                     <p className={`text-foreground/70 leading-relaxed ${language === 'ar' ? 'text-right' : ''}`}>
                       {pillar.text}
                     </p>
-                    <div className="absolute bottom-4 right-4 w-8 h-8 border-2 border-primary/20 group-hover:border-primary/50 rounded-sm transition-colors" />
+                     <div className="absolute bottom-4 right-4 w-8 h-8 border-2 border-primary/20 group-hover:border-primary/50 rounded-sm transition-colors" />
                   </div>
                 </div>
               </div>
             )
           })}
+          </div>
         </div>
       </div>
 
-      {/* Why This Matters */}
+      
       <div className="container mx-auto px-4 mb-20">
         <div className="max-w-4xl mx-auto bg-secondary rounded-lg p-12 border border-border">
           <div className={`${language === 'ar' ? 'text-right' : ''}`}>
@@ -363,25 +453,25 @@ export function ProgramAboutPage({ language }: ProgramAboutPageProps) {
         </div>
       </div>
 
-      {/* Program Section Divider */}
+     
       <div className="container mx-auto px-4 mb-20">
         <div className={`max-w-4xl ${language === 'ar' ? 'text-right' : 'text-center'} mx-auto`}>
           <div className="flex items-center gap-2 mb-4 justify-center">
             <div className="w-1 h-8 bg-primary" />
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">{text.overview}</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 text-balance">
+<h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 text-balance">
             {text.programTitle}
-          </h1>
+          </h2>
           <p className="text-lg text-foreground/70 leading-relaxed">{text.programSubtitle}</p>
         </div>
       </div>
 
-      {/* Key Details Grid */}
+      
       <div className="container mx-auto px-4 mb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {[
-            { label: text.duration, value: '18 Months' },
+{ label: text.duration, value: text.duration === 'Duration' ? '18 Months' : '١٨ شهر' },
             { label: text.participants, value: text.count },
             { label: text.location, value: text.tunisia },
             { label: text.investment, value: text.price },
@@ -398,12 +488,12 @@ export function ProgramAboutPage({ language }: ProgramAboutPageProps) {
             </div>
           ))}
         </div>
-      </div>
+</div>
+ 
 
-{/* Modules - 2x2 Grid */}
 <div className="container mx-auto px-4">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-    {modules.slice(0, 5).map((module, i) => (
+{modules.slice(0, 6).map((module, i) => (
       <div key={i} className="group relative">
         
         <div className="absolute -inset-4 bg-gradient-to-r from-primary/5 via-primary/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
@@ -465,7 +555,7 @@ export function ProgramAboutPage({ language }: ProgramAboutPageProps) {
   </div>
 </div>
 
-      {/* Full Detailed Timeline Visualization */}
+
   <div className="container mx-auto px-4 mt-32 mb-20">
     <div className={`max-w-5xl mx-auto ${language === 'ar' ? 'text-right' : 'text-center'}`}>
       <h2 className="text-3xl md:text-4xl font-bold text-primary mb-16">
@@ -473,16 +563,33 @@ export function ProgramAboutPage({ language }: ProgramAboutPageProps) {
       </h2>
       
       <div className="relative">
-        {/* Background Line */}
+        
         <div className="absolute top-0 left-8 md:left-1/2 md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary/10 via-primary to-primary/10 hidden md:block" />
         
         <div className="space-y-12">
-          {(language === 'en' ? timelineStations.en : timelineStations.ar).map((station, i) => (
+         {(language === 'en' ? timelineStations.en : timelineStations.ar).map((station, i) => (
             <div key={i} className={`relative flex flex-col md:flex-row items-center ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-              {/* Desktop Connector Dot */}
+              
               <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-lg z-10 hidden md:block" />
               
-              {/* Content Card */}
+              
+              <div className="w-full md:w-[45%] group/image">
+                <div className="relative h-48 md:h-52 rounded-2xl border border-border overflow-hidden shadow-sm group-hover/image:shadow-md transition-all duration-300 group-hover/image:-translate-y-1">
+                  <Image
+                    src={`/images/bootcamps/${station.image}`}
+                    alt={station.title}
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 100vw, 45vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                </div>
+              </div>
+              
+              
+              <div className="md:w-[10%]" />
+              
+              
               <div className="w-full md:w-[45%] group">
                 <div className="bg-white p-6 rounded-2xl border border-border shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:-translate-y-1">
                   <div className="flex items-center gap-4 mb-3">
@@ -492,13 +599,10 @@ export function ProgramAboutPage({ language }: ProgramAboutPageProps) {
                       <p className="text-sm text-foreground/50">{station.period}</p>
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">{station.title}</h3>
-                  <p className="text-foreground/70 text-sm leading-relaxed">{station.details}</p>
+                     <h3 className="text-xl font-bold text-foreground mb-2">{station.title}</h3>
+                     <p className="text-foreground/70 text-sm leading-relaxed">{station.details}</p>
                 </div>
               </div>
-              
-              {/* Spacer for Desktop */}
-              <div className="md:w-[10%]" />
             </div>
           ))}
         </div>
@@ -506,7 +610,9 @@ export function ProgramAboutPage({ language }: ProgramAboutPageProps) {
     </div>
   </div>
 
-    </section>
+
+    </div>
   )
-}
+}   
+
 

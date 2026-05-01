@@ -10,42 +10,42 @@ interface ParticipantsSectionProps {
 const participants = {
   en: [
     {
-      name: 'Mohamed Mahmoudi', 
-      practice: 'Craftsmanship & Sustainable Design',
-      bio: 'Artist exploring the intersection of traditional weaving techniques and contemporary eco-conscious design.',
-      image: '/images/participants/medmahmoudi1.jpg',
+      name: 'Raja Bohli',
+      practice: 'Management IT',
+      bio: 'Technical specialist in management informatics with professional experience in tourism and administrative support.',
+      image: '/images/participants/raja-best.jpg',
     },
     {
       name: 'Rim Assadi',
       practice: 'Fine Arts',
       bio: 'Visual arts graduate specializing in sculpture. Skilled in Arabic calligraphy and exploring traditional decorative arts.',
-      image: '/images/participants/rim-assadi2.png',
+      image: '/images/participants/rim-best.jpg',
     },
     {
       name: 'Amal Mokhtari',
-      practice: 'Photography & Documentation',
-      bio: 'Documentary photographer capturing the cultural landscape and community stories.',
-      image: '/images/participants/amel1.jpeg',
+      practice: '_',
+      bio: '_',
+      image: '/images/participants/amel-best.jpg',
     },
   ],
   ar: [
     {
-      name: 'محمد محمودي',
-      practice: 'الحرفية والتصميم المستدام',
-      bio: 'فنان يستكشف تقاطع تقنيات الحياكة التقليدية والتصميم المعاصر الواعي بيئيًا.',
-      image: '/images/participants/medmahmoudi1.jpg',
+      name: 'رجاء بهلي',
+      practice: 'إعلامية التصرف',
+      bio: 'تقنية في إعلامية التصرف مع خبرة في قطاع السياحة. تجمع بين الكفاءة التقنية والرغبة المستمرة في التطوير المهني.',
+      image: '/images/participants/raja-best.jpg',
     },
     {
       name: 'ريم عصادي',
       practice: 'فنون تشكيلية',
       bio: 'فنانة متخصصة في النحت والخط العربي. تبحث في التراث من خلال تقنيات يدوية وفنية متنوعة.',
-      image: '/images/participants/rim-assadi2.png',
+      image: '/images/participants/rim-best.jpg',
     },
     {
       name: 'أمال المختاري',
-      practice: 'التثبيت النحتي',
-      bio: 'نحات معاصر يعمل مع المواد المعاد تدويرها والأشياء المجدة من المنطقة.',
-      image: '/images/participants/amel1.jpeg',
+      practice: ' _',
+      bio: ' _',
+      image: '/images/participants/amel-best.jpg',
     },
   ],
 }

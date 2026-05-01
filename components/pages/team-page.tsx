@@ -28,10 +28,7 @@ interface TeamMember {
   image: string
 }
 
-interface TeamPageProps {
-}
-
-export function TeamPage({}: TeamPageProps) {
+export function TeamPage() {
 
   const [organigramOpen, setOrganigramOpen] = React.useState(false)
   const { language } = useLanguage()
@@ -151,15 +148,7 @@ export function TeamPage({}: TeamPageProps) {
     }
   ]
 
-  const teamDataAr: TeamMember[] = teamDataEn.map(member => ({
-    ...member,
-    nameAr: member.nameAr,
-    roleAr: member.roleAr,
-    bioShortAr: member.bioShortAr,
-    bioFullAr: member.bioFullAr,
-  }))
-
-  const team = language === 'en' ? teamDataEn : teamDataAr
+const team = teamDataEn
 
   const t = {
     programTeam: language === 'en' ? 'Program Team' : 'فريق البرنامج',
@@ -170,10 +159,10 @@ export function TeamPage({}: TeamPageProps) {
 
   return (
   <div className={`min-h-screen ${isArabic ? 'font-arabic text-right' : ''}`}>
-  {/* Slogan Section - Full Width at Top with negative margin to offset navbar padding */}
+{/* Slogan Section - Full Width at Top */}
     <section
       id="slogan"
-className="relative min-h-[100vh] sm:min-h-[90vh] md:min-h-[90vh] lg:min-h-[100vh] overflow-hidden -mt-32"
+className="relative min-h-[100vh] sm:min-h-[90vh] md:min-h-[80vh] lg:min-h-[90vh] overflow-hidden"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -188,9 +177,9 @@ className="relative min-h-[100vh] sm:min-h-[90vh] md:min-h-[90vh] lg:min-h-[100v
         />
       </div>
 
-      {/* Content container - Using absolute positioning */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
-        <div className="container mx-auto px-4 pt-20 md:pt-24 pb-12 md:pb-16 lg:pb-20">
+{/* Content container - Using responsive positioning */}
+      <div className="absolute top-20 left-0 right-0 z-10 md:top-auto md:bottom-0">
+        <div className="container mx-auto px-4 pt-12 md:pt-24 pb-12 md:pb-16 lg:pb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Left Column for Arabic */}
             <div className={`${isArabic ? 'block' : 'hidden md:block'}`}>
@@ -208,13 +197,13 @@ className="relative min-h-[100vh] sm:min-h-[90vh] md:min-h-[90vh] lg:min-h-[100v
               )}
             </div>
 
-            {/* Right Column for English - Now matching Arabic styling */}
+{/* Right Column for English - Now matching Arabic styling */}
             <div className={`${!isArabic ? 'block' : 'hidden md:block'}`}>
               {!isArabic && (
-                <div className="max-w-lg text-right">
-                  <h2 className="text-blue-600 font-bold text-4xl md:text-5xl lg:text-6xl leading-tight drop-shadow-lg">
+                <div className="max-w-lg text-left">
+                  <h1 className="text-blue-600 font-bold text-4xl md:text-5xl lg:text-6xl leading-tight drop-shadow-lg">
                     Program Team
-                  </h2>
+                  </h1>
                   <p className="text-white text-base md:text-lg lg:text-xl leading-relaxed font-semibold mt-4 drop-shadow-md">
                     The operating team of From and To the People brings together a diverse group of practitioners, coordinators, and facilitators dedicated to ensuring the program's effective implementation. Drawing on expertise in art, ecology, and cultural management, the team supports participants throughout their journey—from research and experimentation to production and public presentation.
 

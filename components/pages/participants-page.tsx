@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
+import { useIsMobile } from '@/hooks/use-mobile'
 
 interface ParticipantsPageProps {
   language: 'en' | 'ar'
@@ -243,7 +244,7 @@ const participants = {
       bio: 'Visual artist exploring themes of identity and belonging.',
       specialty: 'Visual Arts',
       initials: 'P25',
-      image: '/images/participants/none.jpeg',
+      image: '/images/participants/tasnim-said.jpg',
     },
     {
       name: 'Rim Belkhir',
@@ -488,7 +489,7 @@ const participants = {
       bio: 'فنان بصري يستكشف مواضيع الهوية والانتماء.',
       specialty: 'فنون',
       initials: 'P25',
-      image: '/images/participants/none.jpeg',
+      image: '/images/participants/tasnim-said.jpg',
     },
     {
       name: 'ريم بلخير',
@@ -514,28 +515,63 @@ const labels = {
 }
 
 export function ParticipantsPage({ language }: ParticipantsPageProps) {
+  const isMobile = useIsMobile()
   const data = language === 'en' ? participants.en : participants.ar
   const text = language === 'en' ? labels.en : labels.ar
   const colors = ['bg-blue-100', 'bg-emerald-100', 'bg-amber-100', 'bg-rose-100', 'bg-violet-100', 'bg-cyan-100']
 
-  return (
-    <section id="participants" className={`min-h-screen py-20 bg-white ${language === 'ar' ? 'font-arabic' : ''}`}>
-      {/* Hero Section */}
-      <div className="container mx-auto px-4 mb-20">
-        <div className={`max-w-3xl ${language === 'ar' ? 'text-right' : 'text-center'}`}>
-          <div className="flex items-center gap-2 mb-4 justify-center">
-            <div className="w-1 h-8 bg-primary" />
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider">{text.cohort}</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 text-balance">
-            {text.title}
-          </h1>
-          <p className="text-lg text-foreground/70 leading-relaxed">{text.subtitle}</p>
-        </div>
-      </div>
+// Select hero image based on device type
+  const heroImage = isMobile 
+    ? '/images/bootcamps/participants-hero-mobile1.jpg'
+    : '/images/bootcamps/participants-hero1.jpg'
 
-      {/* Participants Grid */}
-      <div className="container mx-auto px-4">
+  return (
+    <div className={`min-h-screen ${language === 'ar' ? 'font-arabic text-right' : ''}`}>
+      {/* Hero Section with Background Image */}
+      <section 
+        id="participants-hero" 
+className={`relative overflow-hidden ${isMobile ? '-mt-32 aspect-square' : '-mt-48 min-h-[130vh]'}`}
+      >
+        {/* 1. Background Image Layer */}
+        <div className="absolute inset-0 z-0">
+          <div 
+            className="absolute inset-0 w-full h-full"
+            style={{
+              backgroundImage: `url('${heroImage}')`,
+              backgroundSize: 'contain',
+              backgroundPosition: isMobile ? 'top center' : 'center center',
+              backgroundRepeat: 'no-repeat',
+            }}
+          />
+          
+          {/* MINIMIZED OVERLAY: Only 15% opacity to keep the image bright */}
+ <div className="absolute inset-0 bg-blue-950/5" />
+          
+          {/* GRADIENT: Darkens ONLY the side where text is positioned for readability */}
+          <div className={`absolute inset-0 ${isMobile ? 'bg-gradient-to-t' : language === 'ar' ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-transparent via-blue-950/40 to-blue-950/80`} />
+        </div>
+
+
+</section>
+
+{/* Title Section Below Hero */}
+<section className="bg-white py-16 md:py-24 -mt-10 relative z-10">
+        <div className="container mx-auto px-4">
+          <div className={`max-w-3xl ${language === 'ar' ? 'text-right' : 'text-center'} mx-auto`}>
+            <div className={`flex items-center gap-2 mb-4 ${language === 'ar' ? 'flex-row-reverse justify-end' : 'justify-center'}`}>
+              <div className="w-1 h-8 bg-primary" />
+              <span className="text-sm font-semibold text-primary uppercase tracking-wider">{text.cohort}</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 text-balance">
+              {text.title}
+            </h1>
+            <p className="text-lg text-foreground/70 leading-relaxed">{text.subtitle}</p>
+          </div>
+        </div>
+      </section>
+
+{/* Participants Grid */}
+      <div className="container mx-auto px-4 mt-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {data.map((participant, i) => (
             <div
@@ -581,8 +617,8 @@ export function ParticipantsPage({ language }: ParticipantsPageProps) {
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 mt-20">
+{/* CTA Section */}
+      <div className="container mx-auto px-4 mt-32 mb-20">
         <div className={`max-w-2xl ${language === 'ar' ? 'text-right' : 'text-center'} mx-auto`}>
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
             {language === 'ar' ? 'هل تريد الانضمام إلينا؟' : 'Ready to Join Us?'}
@@ -597,6 +633,6 @@ export function ParticipantsPage({ language }: ParticipantsPageProps) {
           </Button>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
